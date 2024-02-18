@@ -39,6 +39,7 @@ else:
 
 
 ```
-{% note info flat %}
+
+::: tip
 代码块之间缩进有严格的要求，层级关系
-{% endnote %}
+:::
