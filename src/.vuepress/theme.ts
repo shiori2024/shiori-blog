@@ -41,10 +41,10 @@ export default hopeTheme({
       Email: "mailto:shiori2024@163.com",
       GitHub: "https://github.com/shiori2024",
       Gitee: "https://gitee.com/shiori2024/",
-      Lark: "https://example.com",
-      Dingding: "https://example.com",
-      Zhihu: "https://example.com",
-      Rss: "https://example.com"
+      Lark: "/",
+      Dingding: "/",
+      Zhihu: "/",
+      Rss: "/"
     },
   },
 
