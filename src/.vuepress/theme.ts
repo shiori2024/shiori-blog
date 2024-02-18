@@ -1,21 +1,21 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
-import { MR_HOPE_AVATAR } from "./logo.js";
+// import { MR_HOPE_AVATAR } from "./logo.js";
 
 export default hopeTheme({
-  hostname: "https://mister-hope.github.io",
+  hostname: "https://shiori.fun",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "shiori",
+    url: "https://shiori.fun",
   },
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "/logo.png",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "shiori2024/shiori-blog",
 
   docsDir: "src",
 
@@ -23,10 +23,10 @@ export default hopeTheme({
   navbar,
 
   // 侧边栏
-  sidebar,
+  sidebar: false,
 
   // 页脚
-  footer: "默认页脚",
+  footer: '<a href="https://beian.miit.gov.cn/" target="_blank"><span>蜀ICP备2022016473号-1</span></a><span>&nbsp;&nbsp;&nbsp;</span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51030002000194"><img src="http://api.sakurafeiyu.top/imgs/beian_icon.png"/><span>川公网安备 51030002000194号</span></a>',
   displayFooter: true,
 
   // 博客相关
@@ -34,38 +34,17 @@ export default hopeTheme({
     description: "一个前端开发者",
     intro: "/intro.html",
     medias: {
-      Baidu: "https://example.com",
-      BiliBili: "https://example.com",
-      Bitbucket: "https://example.com",
-      Dingding: "https://example.com",
-      Discord: "https://example.com",
-      Dribbble: "https://example.com",
-      Email: "mailto:info@example.com",
-      Evernote: "https://example.com",
-      Facebook: "https://example.com",
-      Flipboard: "https://example.com",
-      Gitee: "https://example.com",
-      GitHub: "https://example.com",
-      Gitlab: "https://example.com",
-      Gmail: "mailto:info@example.com",
-      Instagram: "https://example.com",
+      BiliBili: "https://space.bilibili.com/27608093",
+      QQ: "/",
+      Wechat: "/",
+      Steam: "https://steamcommunity.com/profiles/76561198203768471/",
+      Email: "mailto:shiori2024@163.com",
+      GitHub: "https://github.com/shiori2024",
+      Gitee: "https://gitee.com/shiori2024/",
       Lark: "https://example.com",
-      Lines: "https://example.com",
-      Linkedin: "https://example.com",
-      Pinterest: "https://example.com",
-      Pocket: "https://example.com",
-      QQ: "https://example.com",
-      Qzone: "https://example.com",
-      Reddit: "https://example.com",
-      Rss: "https://example.com",
-      Steam: "https://example.com",
-      Twitter: "https://example.com",
-      Wechat: "https://example.com",
-      Weibo: "https://example.com",
-      Whatsapp: "https://example.com",
-      Youtube: "https://example.com",
+      Dingding: "https://example.com",
       Zhihu: "https://example.com",
-      MrHope: ["https://mister-hope.com", MR_HOPE_AVATAR],
+      Rss: "https://example.com"
     },
   },
 
