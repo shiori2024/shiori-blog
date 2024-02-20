@@ -3,7 +3,7 @@ title: 相册
 toc: false
 sidebar: false
 article: false
-pageInfo: false
+breadcrumb: false
 lastUpdated: false
 editLink: false
 prev: false

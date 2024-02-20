@@ -6,9 +6,29 @@ import sidebar from "./sidebar.js";
 export default hopeTheme({
   hostname: "https://shiori.fun",
 
+  // 博客相关
+  blog: {
+    name: "花诽语",
+    avatar: "/avatar.png",
+    description: "花，华丽的姿态，但终有凋零的一天。",
+    intro: "/intro.html",
+    medias: {
+      BiliBili: "https://space.bilibili.com/27608093",
+      QQ: "/",
+      Wechat: "/",
+      Steam: "https://steamcommunity.com/profiles/76561198203768471/",
+      Email: "mailto:shiori2024@163.com",
+      GitHub: "https://github.com/shiori2024",
+      Gitee: "https://gitee.com/shiori2024/",
+      Zhihu: "/",
+      Rss: "/"
+    }
+  },
+
   author: {
     name: "shiori",
     url: "https://shiori.fun",
+    email: "shiori2024@163.com"
   },
 
   iconAssets: "fontawesome-with-brands",
@@ -19,34 +39,16 @@ export default hopeTheme({
 
   docsDir: "src",
 
+  // 全屏
+  fullscreen: true,
   // 导航栏
   navbar,
-
   // 侧边栏
   sidebar: false,
 
   // 页脚
   footer: '<a href="https://beian.miit.gov.cn/" target="_blank"><span>蜀ICP备2022016473号-1</span></a><span>&nbsp;&nbsp;&nbsp;</span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51030002000194"><img src="http://api.sakurafeiyu.top/imgs/beian_icon.png"/><span>川公网安备 51030002000194号</span></a>',
   displayFooter: true,
-
-  // 博客相关
-  blog: {
-    description: "一个前端开发者",
-    intro: "/intro.html",
-    medias: {
-      BiliBili: "https://space.bilibili.com/27608093",
-      QQ: "/",
-      Wechat: "/",
-      Steam: "https://steamcommunity.com/profiles/76561198203768471/",
-      Email: "mailto:shiori2024@163.com",
-      GitHub: "https://github.com/shiori2024",
-      Gitee: "https://gitee.com/shiori2024/",
-      Lark: "/",
-      Dingding: "/",
-      Zhihu: "/",
-      Rss: "/"
-    },
-  },
 
   // 加密配置
   encrypt: {
@@ -67,6 +69,7 @@ export default hopeTheme({
   plugins: {
     blog: true,
 
+    searchPro: true,
     // 在启用之前需要安装 @waline/client
     // 警告: 这是一个仅供演示的测试服务器，在生产环境中请自行部署并使用自己的服务器！
     // comment: {
@@ -75,20 +78,39 @@ export default hopeTheme({
     // },
 
     components: {
-      components: ["Badge", "VPCard"],
+      components: ["Badge", "VPCard", "SiteInfo", "BiliBili"]
+    },
+
+    comment: {
+      provider: "Giscus",
+      repo: "shiori2024/shiori-blog",
+      repoId: 'R_kgDOLUNp0g',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDOLUNp0s4CdX1D'
     },
 
     // 此处开启了很多功能用于演示，你应仅保留用到的功能。
     mdEnhance: {
+      // 启用自定义对齐
       align: true,
+      // 启用任务列表
+      tasklist: true,
       attrs: true,
       codetabs: true,
-      component: true,
-      demo: true,
+      // 启用 figure
       figure: true,
+      // 启用图片懒加载
       imgLazyload: true,
+      // 启用图片标记
+      imgMark: true,
+      // 启用图片大小
       imgSize: true,
+      // 启用导入支持
       include: true,
+      // 开启组件支持
+      component: true,
+      // 启用代码演示
+      demo: true,
       mark: true,
       stylize: [
         {
@@ -105,16 +127,20 @@ export default hopeTheme({
       ],
       sub: true,
       sup: true,
+      // 添加选项卡支持
       tabs: true,
       vPre: true,
+      footnote: true,
+      // 启用 ECharts 图表
+      echarts: true,
+      // 启用提示容器
+      hint: true,
+
 
       // 在启用之前安装 chart.js
       // chart: true,
 
       // insert component easily
-
-      // 在启用之前安装 echarts
-      // echarts: true,
 
       // 在启用之前安装 flowchart.ts
       // flowchart: true,

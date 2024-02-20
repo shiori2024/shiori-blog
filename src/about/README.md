@@ -1,7 +1,7 @@
 ---
 title: 关于
 # date: 2023-03-07 23:55:09
-icon: laptop-code
+icon: user
 index: false
 toc: false
 sidebar: false
@@ -19,10 +19,12 @@ next: false
 
 
 ## Todo:
-- 音乐页
+- [ ] 音乐页
+- [ ] 词云页
+- [ ] 域名备案
 
 
-::: tip
+::: info
 目前关于组件化的开发进行到了一定程度，如果你想了解更多关于VuePress注册组件的相关内容请持续关注我，或查看[官方文档](https://v2.vuepress.vuejs.org/zh/reference/plugin/register-components.html)，thank u。
 :::
 # 内容
