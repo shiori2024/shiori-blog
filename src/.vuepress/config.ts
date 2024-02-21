@@ -3,7 +3,6 @@ import theme from "./theme.js";
 import { getDirname, path } from "@vuepress/utils";
 const __dirname = getDirname(import.meta.url);
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
-import { searchConsolePlugin } from 'vuepress-plugin-china-search-console'
 
 export default defineUserConfig({
   base: "/",
@@ -43,11 +42,11 @@ export default defineUserConfig({
       // componentsDir写法，该文件夹下的组件都会被注册为Vue组件。
       componentsDir: path.resolve(__dirname, './components'),
     }),
-    searchConsolePlugin({
-      // options ...
-      baiduId: '',
-      toutiaoAutoPushId: ''
-    })
+    // searchConsolePlugin({
+    //   // options ...
+    //   baiduId: '',
+    //   toutiaoAutoPushId: ''
+    // })
   ],
 
 
