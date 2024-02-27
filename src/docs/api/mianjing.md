@@ -1,11 +1,8 @@
 ---
 title: 面经API
 index: false
-toc: false
 sidebar: false
 breadcrumb: false
-lastUpdated: false
-editLink: false
 prev: false
 next: false
 ---
