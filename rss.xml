@@ -1,0 +1,1946 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://shiori.fun/rss.xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <atom:link href="https://shiori.fun/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>花诽语</title>
+    <link>https://shiori.fun/</link>
+    <description>你知道吗，樱花飘落的速度是秒速五厘米</description>
+    <language>zh-CN</language>
+    <pubDate>Tue, 27 Feb 2024 05:16:00 GMT</pubDate>
+    <lastBuildDate>Tue, 27 Feb 2024 05:16:00 GMT</lastBuildDate>
+    <generator>@vuepress/plugin-feed</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>bot</category>
+    <category>birthday</category>
+    <category>DIY</category>
+    <category>教程</category>
+    <category>React</category>
+    <category>AIGC</category>
+    <category>生产力</category>
+    <category>blog</category>
+    <category>游戏</category>
+    <category>python</category>
+    <category>学习</category>
+    <category>vuepress</category>
+    <category>有趣的</category>
+    <category>使用指南</category>
+    <category>指南</category>
+    <item>
+      <title>友链</title>
+      <link>https://shiori.fun/link/</link>
+      <guid>https://shiori.fun/link/</guid>
+      <source url="https://shiori.fun/rss.xml">友链</source>
+      <pubDate>Tue, 20 Feb 2024 16:25:31 GMT</pubDate>
+    </item>
+    <item>
+      <title>音乐</title>
+      <link>https://shiori.fun/music/</link>
+      <guid>https://shiori.fun/music/</guid>
+      <source url="https://shiori.fun/rss.xml">音乐</source>
+      <pubDate>Tue, 20 Feb 2024 16:25:31 GMT</pubDate>
+    </item>
+    <item>
+      <title>词云</title>
+      <link>https://shiori.fun/wordCloud/</link>
+      <guid>https://shiori.fun/wordCloud/</guid>
+      <source url="https://shiori.fun/rss.xml">词云</source>
+      <description>:: echarts 标签词饼图 ::: </description>
+      <pubDate>Tue, 20 Feb 2024 16:25:31 GMT</pubDate>
+      <content:encoded><![CDATA[<p>:: echarts 标签词饼图</p>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token constant">ROOT_PATH</span> <span class="token operator">=</span> <span class="token string">'https://echarts.apache.org/examples/'</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> img <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> canvas <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'canvas'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> ctx <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+img<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> width <span class="token operator">=</span> <span class="token punctuation">(</span>canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> img<span class="token punctuation">.</span>width<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> height <span class="token operator">=</span> <span class="token punctuation">(</span>canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> img<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  ctx<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>img<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> width<span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> imgData <span class="token operator">=</span> ctx<span class="token punctuation">.</span><span class="token function">getImageData</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> width<span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> data <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Float32Array</span><span class="token punctuation">(</span><span class="token punctuation">(</span>imgData<span class="token punctuation">.</span>data<span class="token punctuation">.</span>length <span class="token operator">/</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> off <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> imgData<span class="token punctuation">.</span>data<span class="token punctuation">.</span>length <span class="token operator">/</span> <span class="token number">4</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> r <span class="token operator">=</span> imgData<span class="token punctuation">.</span>data<span class="token punctuation">[</span>i <span class="token operator">*</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> g <span class="token operator">=</span> imgData<span class="token punctuation">.</span>data<span class="token punctuation">[</span>i <span class="token operator">*</span> <span class="token number">4</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> b <span class="token operator">=</span> imgData<span class="token punctuation">.</span>data<span class="token punctuation">[</span>i <span class="token operator">*</span> <span class="token number">4</span> <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> lum <span class="token operator">=</span> <span class="token number">0.2125</span> <span class="token operator">*</span> r <span class="token operator">+</span> <span class="token number">0.7154</span> <span class="token operator">*</span> g <span class="token operator">+</span> <span class="token number">0.0721</span> <span class="token operator">*</span> b<span class="token punctuation">;</span>
+    lum <span class="token operator">=</span> <span class="token punctuation">(</span>lum <span class="token operator">-</span> <span class="token number">125</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">4</span> <span class="token operator">+</span> <span class="token number">50</span><span class="token punctuation">;</span>
+    data<span class="token punctuation">[</span>off<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> i <span class="token operator">%</span> width<span class="token punctuation">;</span>
+    data<span class="token punctuation">[</span>off<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> height <span class="token operator">-</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>i <span class="token operator">/</span> width<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    data<span class="token punctuation">[</span>off<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> lum<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  myChart<span class="token punctuation">.</span><span class="token function">setOption</span><span class="token punctuation">(</span>
+    <span class="token punctuation">(</span>option <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">tooltip</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">backgroundColor</span><span class="token operator">:</span> <span class="token string">'#fff'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">xAxis3D</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'value'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">yAxis3D</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'value'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">zAxis3D</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'value'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">min</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">max</span><span class="token operator">:</span> <span class="token number">100</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">grid3D</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">show</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">viewControl</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token literal-property property">alpha</span><span class="token operator">:</span> <span class="token number">70</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">beta</span><span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">postEffect</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token literal-property property">enable</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">depthOfField</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">enable</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">blurRadius</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">fstop</span><span class="token operator">:</span> <span class="token number">10</span>
+          <span class="token punctuation">}</span>
+          <span class="token comment">// SSAO: {</span>
+          <span class="token comment">//     enable: true </span>
+          <span class="token comment">// }</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">boxDepth</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">boxHeight</span><span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">environment</span><span class="token operator">:</span> <span class="token constant">ROOT_PATH</span> <span class="token operator">+</span> <span class="token string">'/data-gl/asset/starfield.jpg'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">light</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token literal-property property">main</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">shadow</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">intensity</span><span class="token operator">:</span> <span class="token number">2</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">ambientCubemap</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">texture</span><span class="token operator">:</span> <span class="token constant">ROOT_PATH</span> <span class="token operator">+</span> <span class="token string">'/data-gl/asset/canyon.hdr'</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">exposure</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">diffuseIntensity</span><span class="token operator">:</span> <span class="token number">0.2</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">series</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'bar3D'</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">shading</span><span class="token operator">:</span> <span class="token string">'lambert'</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">barSize</span><span class="token operator">:</span> <span class="token number">0.8</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">silent</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">dimensions</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'x'</span><span class="token punctuation">,</span> <span class="token string">'y'</span><span class="token punctuation">,</span> <span class="token string">'z'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">itemStyle</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token function-variable function">color</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">var</span> i <span class="token operator">=</span> params<span class="token punctuation">.</span>dataIndex<span class="token punctuation">;</span>
+              <span class="token keyword">var</span> r <span class="token operator">=</span> imgData<span class="token punctuation">.</span>data<span class="token punctuation">[</span>i <span class="token operator">*</span> <span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">/</span> <span class="token number">255</span><span class="token punctuation">;</span>
+              <span class="token keyword">var</span> g <span class="token operator">=</span> imgData<span class="token punctuation">.</span>data<span class="token punctuation">[</span>i <span class="token operator">*</span> <span class="token number">4</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">/</span> <span class="token number">255</span><span class="token punctuation">;</span>
+              <span class="token keyword">var</span> b <span class="token operator">=</span> imgData<span class="token punctuation">.</span>data<span class="token punctuation">[</span>i <span class="token operator">*</span> <span class="token number">4</span> <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">/</span> <span class="token number">255</span><span class="token punctuation">;</span>
+              <span class="token keyword">var</span> lum <span class="token operator">=</span> <span class="token number">0.2125</span> <span class="token operator">*</span> r <span class="token operator">+</span> <span class="token number">0.7154</span> <span class="token operator">*</span> g <span class="token operator">+</span> <span class="token number">0.0721</span> <span class="token operator">*</span> b<span class="token punctuation">;</span>
+              r <span class="token operator">*=</span> lum <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+              g <span class="token operator">*=</span> lum <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+              b <span class="token operator">*=</span> lum <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+              <span class="token keyword">return</span> <span class="token punctuation">[</span>r<span class="token punctuation">,</span> g<span class="token punctuation">,</span> b<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">data</span><span class="token operator">:</span> data
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+img<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token constant">ROOT_PATH</span> <span class="token operator">+</span> <span class="token string">'/data-gl/asset/sample.jpg'</span><span class="token punctuation">;</span>
+img<span class="token punctuation">.</span>crossOrigin <span class="token operator">=</span> <span class="token string">'Anonymous'</span><span class="token punctuation">;</span>
+</code></pre></div><p>:::</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>栞栞</title>
+      <link>https://shiori.fun/bot/</link>
+      <guid>https://shiori.fun/bot/</guid>
+      <source url="https://shiori.fun/rss.xml">栞栞</source>
+      <description>栞栞，名称源自游戏《公主连结Re:Dive》中的人物角色（公主）栞。一位非常软萌可爱的少女，因为体弱多病的缘故在伊丽莎白牧场养病。 栞栞 当前版本v2.0.1 栞栞的头像 可爱，温柔，傲娇，体弱 相关信息 添加更多性格请提交issues 说明 本机器人是使用NoneBot-v2框架的QQ机器人和yobot公会战辅助机器人，功能使用NoneBot社区商店...</description>
+      <category>bot</category>
+      <pubDate>Sun, 18 Feb 2024 15:02:23 GMT</pubDate>
+      <content:encoded><![CDATA[<p>栞栞，名称源自游戏《<a href="https://game.bilibili.com/pcr/" target="_blank" rel="noopener noreferrer">公主连结Re:Dive</a>》中的人物角色（公主）<a href="https://wiki.biligame.com/pcr/%E6%A0%9E" target="_blank" rel="noopener noreferrer">栞</a>。一位非常软萌可爱的少女，因为体弱多病的缘故在伊丽莎白牧场养病。</p>
+<!--more-->
+<h1>栞栞</h1>
+<p>当前版本<code>v2.0.1</code><br>
+<img src="https://img12.360buyimg.com/ddimg/jfs/t1/177496/11/19424/7868/61188268E43a55f72/7368e46f20382fe7.jpg" alt="栞栞的头像" loading="lazy"></p>
+<p>可爱，温柔，傲娇，体弱</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
+<p>添加更多性格请提交<a href="https://github.com/a1046700338/MyPress/issues/new" target="_blank" rel="noopener noreferrer">issues</a></p>
+</div>
+<h2>说明</h2>
+<p>本机器人是使用<code>NoneBot-v2</code>框架的QQ机器人和yobot公会战辅助机器人，功能使用NoneBot社区商店所提供的插件，进行二次修改，因地制宜的，达到公主连结游戏辅助和群聊机器人娱乐使用的效果。<br>
+<a href="http://bot.sakurafeiyu.top:9222" target="_blank" rel="noopener noreferrer">栞栞pcr公会战面板</a></p>
+<h2>维护者留言</h2>
+<p>我承诺一件事，永不收费，只要群里还在玩着pcr，栞栞会一直运行下去。
+2021/8/2    维护者（栞栞的super admin）：花诽语 | 联系方式：<a href="mailto:1046700338@qq.com">1046700338@qq.com</a></p>
+<p><em><strong>对于栞栞的运行和维护属于为爱发电，服务器、域名和其他维护成本均为维护者承担，无任何售卖、交易等行为，仅供娱乐使用，请遵循中华人民共和国相关法律法规。最后，祝我们的栞栞越来越好！</strong></em></p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
+<p>本机器人使用的框架均为开源项目</p>
+</div>
+<h2>MIT</h2>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>The MIT License (MIT)
+Copyright (c) 2020 NoneBot Team
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</code></pre></div>]]></content:encoded>
+      <enclosure url="https://img12.360buyimg.com/ddimg/jfs/t1/177496/11/19424/7868/61188268E43a55f72/7368e46f20382fe7.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>栞栞插件配置</title>
+      <link>https://shiori.fun/bot/config.html</link>
+      <guid>https://shiori.fun/bot/config.html</guid>
+      <source url="https://shiori.fun/rss.xml">栞栞插件配置</source>
+      <description>栞栞的插件配置 NoneBot官方商店 NoneBot社区提供了一个插件平台，可以在上面找到你所需要的插件。 nonebot插件网址 nbcli命令 实例 </description>
+      <category>bot</category>
+      <pubDate>Sun, 18 Feb 2024 15:02:23 GMT</pubDate>
+      <content:encoded><![CDATA[<p>栞栞的插件配置</p>
+<!--more-->
+<h1>NoneBot官方商店</h1>
+<p>NoneBot社区提供了一个插件平台，可以在上面找到你所需要的插件。
+<a href="https://v2.nonebot.dev/store" target="_blank" rel="noopener noreferrer">nonebot插件网址</a></p>
+<h1>nbcli命令</h1>
+<div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token comment"># 卸载插件</span>
+nb plugin uninstall <span class="token operator">&lt;</span>插件名称<span class="token operator">&gt;</span>
+<span class="token comment"># 安装插件</span>
+nb plugin <span class="token function">install</span> <span class="token operator">&lt;</span>插件名称<span class="token operator">&gt;</span>
+<span class="token comment"># 列出商店所有适配器</span>
+nb adapter list
+<span class="token comment"># 搜索商店适配器</span>
+nb adapter search <span class="token punctuation">[</span>可选关键词<span class="token punctuation">]</span>
+<span class="token comment"># 卸载适配器</span>
+nb adapter uninstall <span class="token operator">&lt;</span>适配器名称<span class="token operator">&gt;</span>
+</code></pre></div><h2>实例</h2>
+<div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code>nb plugin <span class="token function">install</span> nonebot-plugin-help
+nb plugin uninstall nonebot-plugin-help
+</code></pre></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>栞栞部署</title>
+      <link>https://shiori.fun/bot/deploy.html</link>
+      <guid>https://shiori.fun/bot/deploy.html</guid>
+      <source url="https://shiori.fun/rss.xml">栞栞部署</source>
+      <description>栞栞的部署 起步 【使用nbcli脚手架安装教程】 由于使用的NoneBot-v2框架，所以python版本必须是3.8以上。 NoneBot-v2官网 | python阿里源下载 由于国内pip过慢，你可以先添加清华镜像源： 官方视频教程 </description>
+      <category>bot</category>
+      <pubDate>Sun, 18 Feb 2024 15:02:23 GMT</pubDate>
+      <content:encoded><![CDATA[<p>栞栞的部署</p>
+<!--more-->
+<h1>起步</h1>
+<p>【使用nbcli脚手架安装教程】<br>
+由于使用的<code>NoneBot-v2</code>框架，所以python版本必须是3.8以上。<br>
+<a href="https://v2.nonebot.dev/" target="_blank" rel="noopener noreferrer">NoneBot-v2官网</a> | <a href="https://registry.npmmirror.com/-/binary/python/3.11.2/python-3.11.2-amd64.exe" target="_blank" rel="noopener noreferrer">python阿里源下载</a></p>
+<p>由于国内pip过慢，你可以先添加<a href="https://mirrors.tuna.tsinghua.edu.cn/help/pypi/" target="_blank" rel="noopener noreferrer">清华镜像源</a>：</p>
+<div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token comment"># pip临时使用</span>
+pip <span class="token function">install</span> <span class="token parameter variable">-i</span> https://pypi.tuna.tsinghua.edu.cn/simple some-package
+
+<span class="token comment"># 设为默认 升级 pip 到最新的版本 (&gt;=10.0.0) 后进行配置：</span>
+python <span class="token parameter variable">-m</span> pip <span class="token function">install</span> <span class="token parameter variable">--upgrade</span> pip
+pip config <span class="token builtin class-name">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+<span class="token comment"># 如果您到 pip 默认源的网络连接较差，临时使用本镜像站来升级 pip：</span>
+python <span class="token parameter variable">-m</span> pip <span class="token function">install</span> <span class="token parameter variable">-i</span> https://pypi.tuna.tsinghua.edu.cn/simple <span class="token parameter variable">--upgrade</span> pip
+
+<span class="token comment"># 配置多个镜像源，如果您想配置多个镜像源平衡负载，可在已经替换 index-url 的情况下通过以下方式继续增加源站：</span>
+pip config <span class="token builtin class-name">set</span> global.extra-index-url <span class="token string">"&lt;url1&gt; &lt;url2&gt;..."</span>
+<span class="token comment"># 请自行替换引号内的内容，源地址之间需要有空格</span>
+
+<span class="token comment"># 可用的 pypi 源列表（校园网联合镜像站）：https://mirrors.cernet.edu.cn/list/pypi</span>
+</code></pre></div><h1>官方视频教程</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>栞栞插件</title>
+      <link>https://shiori.fun/bot/plugins.html</link>
+      <guid>https://shiori.fun/bot/plugins.html</guid>
+      <source url="https://shiori.fun/rss.xml">栞栞插件</source>
+      <description>栞栞用到的插件 插件 栞栞使用到的NoneBot-v2插件 thanks NoneBot-v2本体 go-cqhttp Mirai yobot魔改版 setu_collection B站动态转发以及up主订阅 e宝喜加一 LOL比赛信息推送 疯狂星期四 复读姬 人生重开模拟器 今日运势 棋类游戏 一言 戒x打卡日记 切噜语 NoneBot 树形帮助插件...</description>
+      <category>bot</category>
+      <pubDate>Sun, 18 Feb 2024 15:02:23 GMT</pubDate>
+      <content:encoded><![CDATA[<p>栞栞用到的插件</p>
+<!--more-->
+<h2>插件</h2>
+<p>栞栞使用到的<code>NoneBot-v2</code>插件<br>
+<img src="https://img13.360buyimg.com/ddimg/jfs/t1/197517/18/3220/95621/61189399Eba01e9ee/8606260b2f11909c.gif" alt="thanks" loading="lazy"></p>
+<ul>
+<li><a href="https://v2.nonebot.dev/" target="_blank" rel="noopener noreferrer">NoneBot-v2本体</a></li>
+<li><a href="https://github.com/Mrs4s/go-cqhttp.git" target="_blank" rel="noopener noreferrer">go-cqhttp</a></li>
+<li><a href="https://github.com/mamoe/mirai" target="_blank" rel="noopener noreferrer">Mirai</a></li>
+<li><a href="https://github.com/eggggi/yobot_remix" target="_blank" rel="noopener noreferrer">yobot魔改版</a></li>
+<li><a href="https://github.com/KarisAya/nonebot_plugin_setu_collection" target="_blank" rel="noopener noreferrer">setu_collection</a></li>
+<li><a href="https://github.com/SK-415/HarukaBot" target="_blank" rel="noopener noreferrer">B站动态转发以及up主订阅</a></li>
+<li><a href="https://github.com/monsterxcn/nonebot_plugin_epicfree" target="_blank" rel="noopener noreferrer">e宝喜加一</a></li>
+<li><a href="https://github.com/Diaosi1111/nonebot_plugin_lolmatch" target="_blank" rel="noopener noreferrer">LOL比赛信息推送</a></li>
+<li><a href="https://github.com/MinatoAquaCrews/nonebot_plugin_crazy_thursday" target="_blank" rel="noopener noreferrer">疯狂星期四</a></li>
+<li><a href="https://github.com/Utmost-Happiness-Planet/nonebot-plugin-repeater" target="_blank" rel="noopener noreferrer">复读姬</a></li>
+<li><a href="https://github.com/noneplugin/nonebot-plugin-remake" target="_blank" rel="noopener noreferrer">人生重开模拟器</a></li>
+<li><a href="https://github.com/MinatoAquaCrews/nonebot_plugin_fortune" target="_blank" rel="noopener noreferrer">今日运势</a></li>
+<li><a href="https://github.com/noneplugin/nonebot-plugin-boardgame" target="_blank" rel="noopener noreferrer">棋类游戏</a></li>
+<li><a href="https://github.com/A-kirami/nonebot-plugin-hitokoto" target="_blank" rel="noopener noreferrer">一言</a></li>
+<li><a href="https://github.com/Ikaros-521/nonebot_plugin_abstain_diary" target="_blank" rel="noopener noreferrer">戒x打卡日记</a></li>
+<li><a href="https://github.com/ANGJustinl/nonebot_plugin_animalVoice/" target="_blank" rel="noopener noreferrer">切噜语</a></li>
+<li><a href="https://github.com/he0119/nonebot-plugin-treehelp" target="_blank" rel="noopener noreferrer">NoneBot 树形帮助插件</a></li>
+<li><a href="https://github.com/Ikaros-521/nonebot_plugin_random_stereotypes" target="_blank" rel="noopener noreferrer">发病语录</a></li>
+<li><a href="https://github.com/QingMuCat/nonebot_plugin_xiuxian_2" target="_blank" rel="noopener noreferrer">修仙2.0</a></li>
+<li><a href="https://github.com/XZhouQD/nonebot-plugin-bwiki-navigator" target="_blank" rel="noopener noreferrer">BWIKI助手</a></li>
+</ul>
+<h2>适配器</h2>
+<ul>
+<li><a href="https://github.com/ieew/nonebot_adapter_mirai2/wiki" target="_blank" rel="noopener noreferrer">mirai2</a></li>
+</ul>
+<blockquote>
+<p>以上排名不分先后</p>
+</blockquote>
+]]></content:encoded>
+      <enclosure url="https://img13.360buyimg.com/ddimg/jfs/t1/197517/18/3220/95621/61189399Eba01e9ee/8606260b2f11909c.gif" type="image/gif"/>
+    </item>
+    <item>
+      <title>Happy Birthday!</title>
+      <link>https://shiori.fun/demo/birthday.html</link>
+      <guid>https://shiori.fun/demo/birthday.html</guid>
+      <source url="https://shiori.fun/rss.xml">Happy Birthday!</source>
+      <description> </description>
+      <category>birthday</category>
+      <pubDate>Sun, 18 Feb 2024 15:02:23 GMT</pubDate>
+      <content:encoded><![CDATA[
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Awtrix</title>
+      <link>https://shiori.fun/posts/Awtrix.html</link>
+      <guid>https://shiori.fun/posts/Awtrix.html</guid>
+      <source url="https://shiori.fun/rss.xml">Awtrix</source>
+      <description>最近在b站上看了制作Awtrix像素时钟的视频非常心动，也想自己动手diy做一下，那么这篇blog就是记录我从零开始制作出一个成品的Awtrix像素时钟。 Awtrix项目介绍 AWTRIX是一位德国作者的开源项目，其项目有高定制化，高可塑性，高组合性的特点，基于这个开源项目，我们只需自行购买基础的硬件、服务端和客户端。 Awtrix官方文档 起步 起...</description>
+      <category>DIY</category>
+      <pubDate>Wed, 21 Jul 2021 14:24:43 GMT</pubDate>
+      <content:encoded><![CDATA[<p>最近在b站上看了制作Awtrix像素时钟的视频非常心动，也想自己动手diy做一下，那么这篇blog就是记录我从零开始制作出一个成品的Awtrix像素时钟。</p>
+<!-- more -->
+<h1>Awtrix项目介绍</h1>
+<p>AWTRIX是一位德国作者的开源项目，其项目有高定制化，高可塑性，高组合性的特点，基于这个开源项目，我们只需自行购买基础的硬件、服务端和客户端。
+<a href="https://awtrixdocs.blueforcer.de/#/en-en/README" target="_blank" rel="noopener noreferrer">Awtrix官方文档</a></p>
+<h1>起步</h1>
+<p>起步阶段，开始准备制作像素时钟的材料清单，决定要购买和用到哪些材料。
+|         材料清单          |     |        |
+|:</p>
+]]></content:encoded>
+      <enclosure url="https://s1.ax1x.com/2022/04/21/Lcge4s.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>OBS软件下载教程</title>
+      <link>https://shiori.fun/posts/OBS.html</link>
+      <guid>https://shiori.fun/posts/OBS.html</guid>
+      <source url="https://shiori.fun/rss.xml">OBS软件下载教程</source>
+      <description>OBS，一个视频录制以及直播串流的软件 接下来我将对OBS的安装和使用进行详细的介绍 进入OBS官网下载软件 链接 来到OBS中国官网，目前OBS支持主流的操作系统，根据你的操作系统对应下载即可 重点介绍下载方法 主页面 选择主界面右上角&amp;quot;下载&amp;quot;，在这里面可以根据你的需求和操作系统来进行版本的选择， &amp;quot;下载安装程序&amp;quot;---下载下来就是一个exe可执行文...</description>
+      <category>教程</category>
+      <pubDate>Fri, 25 Dec 2020 18:32:22 GMT</pubDate>
+      <content:encoded><![CDATA[<p>OBS，一个视频录制以及直播串流的软件</p>
+<!-- more -->
+<h1>接下来我将对OBS的安装和使用进行详细的介绍</h1>
+<ol>
+<li>进入OBS官网下载软件 <a href="https://obsproject.com/zh-cn" title="OBS官网" target="_blank" rel="noopener noreferrer">链接</a></li>
+<li>来到OBS中国官网，目前OBS支持主流的操作系统，根据你的操作系统对应下载即可</li>
+<li>重点介绍下载方法
+<img src="https://cdn.jsdelivr.net/gh/a1046700338/a1046700338.github.io@2.0/images/obs1.jpg" alt="主页面" loading="lazy">
+选择主界面右上角"下载"，在这里面可以根据你的需求和操作系统来进行版本的选择，
+<img src="https://cdn.jsdelivr.net/gh/a1046700338/a1046700338.github.io@2.0/images/obs2.jpg" alt="" loading="lazy">
+"下载安装程序"</li>
+</ol>
+]]></content:encoded>
+      <enclosure url="https://cdn.jsdelivr.net/gh/a1046700338/a1046700338.github.io@2.0/images/obs1.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>React Native</title>
+      <link>https://shiori.fun/posts/ReactNative.html</link>
+      <guid>https://shiori.fun/posts/ReactNative.html</guid>
+      <source url="https://shiori.fun/rss.xml">React Native</source>
+      <description>React Native 介绍 安卓应用开发框架 学习React Native 学习React基础知识：React Native是基于React的，所以你需要先学习React。了解React的语法和组件生命周期。 学习React Native官方文档：React Native官方文档对React Native的基本概念、API、组件等提供了详尽的解释和...</description>
+      <category>React</category>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>安卓应用开发框架</p>
+<h1>学习React Native</h1>
+<ol>
+<li>
+<p>学习React基础知识：React Native是基于React的，所以你需要先学习React。了解React的语法和组件生命周期。</p>
+</li>
+<li>
+<p>学习React Native官方文档：React Native官方文档对React Native的基本概念、API、组件等提供了详尽的解释和实例，是入门的重要资源。</p>
+</li>
+<li>
+<p>练习小项目：学习的最好方法是实践，可以尝试开发一些简单的React Native小项目，例如账单记录、天气预报等，掌握React Native的开发流程。</p>
+</li>
+<li>
+<p>参考社区资源：React Native社区资源丰富，可以参考社区中优秀的开源项目、博客、视频等学习，也可以加入React Native的社区，交流学习经验。</p>
+</li>
+<li>
+<p>持续学习和实践：学习和开发是持续的过程，需要不断更新、学习新的技术和功能，从实践中不断优化技术和代码。</p>
+</li>
+</ol>
+<h1>React基础知识</h1>
+<h2>语法</h2>
+<h2>入门示例：</h2>
+<p>通过React编写一个 井字棋游戏 来更加直观的了解React。<br>
+三个React组件:</p>
+<ul>
+<li>Square</li>
+<li>Board</li>
+<li>Game
+<code>Square</code>组件渲染了一个单独的<code>&lt;button&gt;</code>，<code>Board</code>组件渲染了9个方块，<code>Game</code>组件渲染了含有默认值的棋盘。</li>
+</ul>
+<p>通过Props传递数据</p>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Board</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+    <span class="token function">renderSquare</span><span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>Square value<span class="token operator">=</span><span class="token punctuation">{</span>i<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>从父组件Board传递给了子组件Square，在React中，数据通过props传递。</p>
+<h3>完整代码</h3>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Square</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>button className<span class="token operator">=</span><span class="token string">"square"</span>
+        onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span><span class="token function">onClick</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>value<span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Board</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">squares</span><span class="token operator">:</span> <span class="token function">Array</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">renderSquare</span><span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>Square
+        value<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>squares<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">}</span>
+        onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">handleClick</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">handleClick</span><span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> squares <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>squares<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    squares<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'X'</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">squares</span><span class="token operator">:</span> squares<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> status <span class="token operator">=</span> <span class="token string">'Next player: X'</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"status"</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>status<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"board-row"</span><span class="token operator">&gt;</span>
+          <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderSquare</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+          <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderSquare</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+          <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderSquare</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"board-row"</span><span class="token operator">&gt;</span>
+          <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderSquare</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+          <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderSquare</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+          <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderSquare</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"board-row"</span><span class="token operator">&gt;</span>
+          <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderSquare</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+          <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderSquare</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+          <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderSquare</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Game</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"game"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"game-board"</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>Board <span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"game-info"</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token comment">/* status */</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>ol<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token comment">/* TODO */</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>ol<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// ========================================</span>
+
+<span class="token keyword">const</span> root <span class="token operator">=</span> ReactDOM<span class="token punctuation">.</span><span class="token function">createRoot</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+root<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>Game <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>重写成函数组件<br>
+如果你想写的组件只包含一个<code>render</code>方法，并且不包含<code>state</code>，那么使用函数组件就会更简单。</p>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">Square</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>button
+     className<span class="token operator">=</span><span class="token string">"square"</span>
+     onClick<span class="token operator">=</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>onClick<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+      <span class="token punctuation">{</span>props<span class="token punctuation">.</span>value<span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">Board</span><span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">const</span> status <span class="token operator">=</span> <span class="token string">"Next player: X"</span><span class="token punctuation">;</span>
+  <span class="token comment">//...</span>
+</code></pre></div><h2>组件</h2>
+<h2>生命周期</h2>
+<h1>React Native官方文档</h1>
+<h1>练习</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>aplayer</title>
+      <link>https://shiori.fun/posts/aplayer.html</link>
+      <guid>https://shiori.fun/posts/aplayer.html</guid>
+      <source url="https://shiori.fun/rss.xml">aplayer</source>
+      <description>aplayer是一款非常漂亮的h5音乐播放器，是GitHub开源项目 1. 安装音乐插件 在你的hexo博客目录右键git bash here里输入这行代码 2. 然后在网站的根目录下的配置文件_config.yml中填上以下代码： 注意冒号后都有空格 3. 建立音乐页面 使用命令创建音乐界面，比如命名为music。 hexo new page mus...</description>
+      <category>教程</category>
+      <pubDate>Wed, 10 Mar 2021 18:44:23 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>1. 安装音乐插件</h2>
+<p>在你的hexo博客目录右键git bash here里输入这行代码</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>npm install --save hexo-tag-aplayer
+</code></pre></div><h2>2. 然后在网站的根目录下的配置文件_config.yml中填上以下代码：</h2>
+<p>注意冒号后都有空格</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>aplayer:
+  #script_dir: some/place                        # Public 目录下脚本目录路径，默认: 'assets/js'
+  #style_dir: some/place                         # Public 目录下样式目录路径，默认: 'assets/css'
+  #cdn: http://xxx/aplayer.min.js                # 引用 APlayer.js 外部 CDN 地址 (默认不开启)
+  #style_cdn: http://xxx/aplayer.min.css         # 引用 APlayer.css 外部 CDN 地址 (默认不开启)
+  meting: true                                   # MetingJS 支持
+  #meting_api: http://xxx/api.php                # 自定义 Meting API 地址
+  #meting_cdn: http://xxx/Meing.min.js           # 引用 Meting.js 外部 CDN 地址 (默认不开启)
+  asset_inject: true                             # 自动插入 Aplayer.js 与 Meting.js 资源脚本, 默认开启
+  #externalLink: http://xxx/aplayer.min.js       # 老版本参数，功能与参数 cdn 相同
+</code></pre></div><h2>3. 建立音乐页面</h2>
+<p>使用命令创建音乐界面，比如命名为music。
+<code>hexo new page music</code>
+打开网站根目录source\music\index.md根据hexo-tag-aplayer文档书写即可。
+打开index.md在markdown中要这样写</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>{% meting "4857802824" "netease" "playlist" "autoplay" "mutex:false" "listmaxheight:340px" "preload:none" "theme:#ad7a86"%}
+</code></pre></div><p>其会被渲染为html</p>
+<h2>4. 在主题配置文件_config.yml中menu</h2>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>  menu:
+    - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
+    - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
+    - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
+    - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
+    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
+    - { key: "music", link: "/music/", icon: "iconfont icon-music" }
+
+</code></pre></div><p>添加上这一行</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>- { key: "music", link: "/music/", icon: "iconfont icon-music" }
+</code></pre></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>ChatGLM</title>
+      <link>https://shiori.fun/posts/chatGLM.html</link>
+      <guid>https://shiori.fun/posts/chatGLM.html</guid>
+      <source url="https://shiori.fun/rss.xml">ChatGLM</source>
+      <description>ChatGLM 是清华大学的开源项目，其 ChatGLM-6B 是一个开源的、支持中英双语的对话语言模型， ，具有 62 亿参数。虽说参数在GPT中不算高，但是作为消费级的显卡上进行本地部署就非常实用。 官网 博客 | ChatGLM-6B 教学视频 </description>
+      <category>AIGC</category>
+      <pubDate>Wed, 21 Jul 2021 14:24:43 GMT</pubDate>
+      <content:encoded><![CDATA[<p>ChatGLM 是清华大学的开源项目，其 ChatGLM-6B 是一个开源的、支持中英双语的对话语言模型，
+，具有 62 亿参数。虽说参数在GPT中不算高，但是作为消费级的显卡上进行本地部署就非常实用。</p>
+<!-- more -->
+<h1>官网</h1>
+<p><a href="https://chatglm.cn/blog" target="_blank" rel="noopener noreferrer">博客</a> | <a href="https://github.com/THUDM/ChatGLM-6B" target="_blank" rel="noopener noreferrer">ChatGLM-6B</a></p>
+<h1>教学视频</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>下载解决方法</title>
+      <link>https://shiori.fun/posts/download-fangfa.html</link>
+      <guid>https://shiori.fun/posts/download-fangfa.html</guid>
+      <source url="https://shiori.fun/rss.xml">下载解决方法</source>
+      <description>qBittorrent 是一款开源免费的种子和磁力链接下载工具，支持 Windows、Mac 和 Linux，且功能非常强大。 qBittorrent 本文参考的文章有：https://trackerslist.com/#/zh https://qu.js.cn/how-to-speed-github/#release%E4%B8%8B%E8%BD%B...</description>
+      <category>教程</category>
+      <pubDate>Fri, 25 Dec 2020 19:13:01 GMT</pubDate>
+      <content:encoded><![CDATA[<p>qBittorrent 是一款开源免费的种子和磁力链接下载工具，支持 Windows、Mac 和 Linux，且功能非常强大。</p>
+<!-- more -->
+<h1>qBittorrent</h1>
+<blockquote>
+<p>本文参考的文章有：https://trackerslist.com/#/zh<br>
+https://qu.js.cn/how-to-speed-github/#release%E4%B8%8B%E8%BD%BD%E5%8A%A0%E9%80%9F<br>
+https://zhuanlan.zhihu.com/p/64254201</p>
+</blockquote>
+<h2>qBittorrent 是一款开源免费的种子和磁力链接下载工具，支持 Windows、Mac 和 Linux，且功能非常强大。</h2>
+<h2><a class="header-anchor" href="#qbittorrent的下载链接"><span>qBittorrent的</span></a><a href="https://www.qbittorrent.org/download.php" title="官方网址" target="_blank" rel="noopener noreferrer">下载链接</a></h2>
+<p>由于国内大部分用户并没有公网 IP，直接使用可能下载没速度，就需要安装好qBittorrent后再对设置配置一下<br>
+https://trackerslist.com/#/zh 这个网站专门整合Tracker（具体Tracker是什么意思自行百度），每8小时都有更新</p>
+<h2>qBittorrent设置Tracker</h2>
+<p>点击齿轮图标进入设置界面<br>
+<a href="https://imgtu.com/i/W9LOsK" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/07/11/W9LOsK.png" alt="qBittorrent主界面" loading="lazy"></a><br>
+复制Tracker<br>
+<a href="https://imgtu.com/i/W9OgFH" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/07/11/W9OgFH.png" alt="复制Tracker" loading="lazy"></a><br>
+将Tracker粘贴到下方输入框中
+<a href="https://imgtu.com/i/W9O46P" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/07/11/W9O46P.png" alt="粘贴Tracker" loading="lazy"></a><br>
+然后点击 [Apply] 保存。(如下图所示)
+<a href="https://imgtu.com/i/W9OT0S" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/07/11/W9OT0S.png" alt="qBittorrent设置" loading="lazy"></a></p>
+<h1>国内加速Github的几种方案</h1>
+<p>国内最常用的镜像地址：</p>
+<ol>
+<li>github.com.cnpmjs.org</li>
+<li>hub.fastgit.org (推荐)</li>
+<li>gitclone.com
+网站的内容与GitHub完整同步，可进行下载克隆等操作。</li>
+</ol>
+<h2>仓库克隆下载</h2>
+<p>原地址</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>git clone https://github.com/docker/compose.git
+</code></pre></div><p>改为</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>git clone https://github.com.cnpmjs.org/docker/compose.git
+</code></pre></div><p>或者</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>git clone https://hub.fastgit.org/docker/compose.git
+</code></pre></div><h2>Release下载加速</h2>
+<p>原地址</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>wget https://github.com/golang/go/archive/go1.15.7.tar.gz
+</code></pre></div><p>改为</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>wget https://hub.fastgit.org/golang/go/archive/go1.15.7.tar.gz
+</code></pre></div><h2>jsDelivr</h2>
+<p>jsDelivr是一个开源的网站，是一款公共免费的CDN，提供稳定的CDN。</p>
+<blockquote>
+<p>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在现有网络基础之上的智能虚拟网络，依靠部署在各地的边缘服务器,
+通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键
+技术主要有内容存储和分发技术。(摘自<a href="https://baike.baidu.com/item/CDN" title="CDN百度百科" target="_blank" rel="noopener noreferrer">百度百科</a>)
+也就是说你上传资源（比如：图片，js之类的文件）到互联网上，CDN服务器帮你存储下来，当你要使用又可以调用它给你的CDN url。</p>
+</blockquote>
+<ol>
+<li>直接引用(临时)
+格式为：</li>
+</ol>
+<p>https://cdn.jsdelivr.net/gh/&lt;用户名&gt;/&lt;仓库名&gt;/&lt;文件及路径&gt;</p>
+<p>例如：GitHub</p>
+<p>https://github.com/qimage/pub/blob/main/avatar.webp</p>
+<p>转成 jsdelivr</p>
+<p>https://cdn.jsdelivr.net/gh/qimage/pub/avatar.webp</p>
+<p>github.com 替换成 cdn.jsdelivr.net/gh</p>
+<p>/blob/main 删除</p>
+<ol start="2">
+<li>引入版本号(推荐)
+版本号用@符链接，格式为：</li>
+</ol>
+<p>https://cdn.jsdelivr.net/gh/&lt;用户名&gt;/&lt;仓库名&gt;@版本号/&lt;文件及路径&gt;</p>
+<p>例如：GitHub</p>
+<p>https://github.com/qimage/pub/blob/main/avatar.webp</p>
+<p>转成 jsdelivr</p>
+<p>https://cdn.jsdelivr.net/gh/qimage/pub@main/avatar.webp</p>
+<p>github.com 替换成 cdn.jsdelivr.net/gh</p>
+<p>/blob/ 替换成 @</p>
+<p>注：main为创建的版本号</p>
+<p>建议使用发布版本号方案，只要单次版本号下的内容大小不超过50M即可，超过50M时使用多版本号。</p>
+<h2><a class="header-anchor" href="#更多详情请查看这篇文章"><span>更多详情请查看</span></a><a href="https://qu.js.cn/how-to-speed-github/#release%E4%B8%8B%E8%BD%BD%E5%8A%A0%E9%80%9F" target="_blank" rel="noopener noreferrer">这篇文章</a></h2>
+]]></content:encoded>
+      <enclosure url="https://z3.ax1x.com/2021/07/11/W9LOsK.png" type="image/png"/>
+    </item>
+    <item>
+      <title>flutter</title>
+      <link>https://shiori.fun/posts/flutter.html</link>
+      <guid>https://shiori.fun/posts/flutter.html</guid>
+      <source url="https://shiori.fun/rss.xml">flutter</source>
+      <description>Google公司推出的dark语言编写的多平台应用 什么是flutter Google公司推出的dark语言编写的多平台应用 Currently the most beautiful apps Free and Open Source 官网 | 中文站 | Flutter中文网 起步 已拥有Android Studio, IntelliJ, VS Co...</description>
+      <category>教程</category>
+      <pubDate>Sun, 17 Apr 2022 22:38:38 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Google公司推出的dark语言编写的多平台应用</p>
+<!-- more -->
+<h1>什么是flutter</h1>
+<p>Google公司推出的dark语言编写的多平台应用</p>
+<blockquote>
+<p>Currently the most beautiful apps</p>
+</blockquote>
+<p><strong>Free and Open Source</strong><br>
+<a href="https://flutter.dev/" target="_blank" rel="noopener noreferrer">官网</a> | <a href="https://flutter.cn/" target="_blank" rel="noopener noreferrer">中文站</a> | <a href="https://flutterchina.club/" target="_blank" rel="noopener noreferrer">Flutter中文网</a></p>
+<h1>起步</h1>
+<p>已拥有Android Studio, IntelliJ, VS Code等IDE可直接添加plugins。</p>
+<h2>在AS中安装</h2>
+<p>“file”--&gt;“settings”--&gt;“plugins”，搜索“flutter”即可，如图：
+<a href="https://imgtu.com/i/LaJ2If" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJ2If.png" alt="flutter1" loading="lazy"></a>
+<a href="https://imgtu.com/i/LaJhRg" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJhRg.png" alt="flutter2" loading="lazy"></a>
+<a href="https://imgtu.com/i/LaJWi8" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJWi8.png" alt="flutter3" loading="lazy"></a>
+<a href="https://imgtu.com/i/LaJgdP" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJgdP.png" alt="flutter4" loading="lazy"></a>
+<a href="https://imgtu.com/i/LaJfJS" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJfJS.png" alt="flutter5" loading="lazy"></a></p>
+<h2>下载Flutter SDK</h2>
+<p>https://flutter.cn/docs/get-started/install/windows#get-the-flutter-sdk<br>
+（Windows）
+解压文件，将<strong>flutter</strong>整个目录放到你想放在你想放置 Flutter SDK 的路径中<br>
+例如<code>E:\Program Files\flutter\flutter_windows_2.10.4-stable</code><br>
+<a href="https://imgtu.com/i/LaJnaV" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJnaV.png" alt="flutter6" loading="lazy"></a></p>
+<h2>或者你可以直接git clone Flutter仓库直接下载发行版</h2>
+<div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code>$<span class="token operator">&gt;</span>git clone https://github.com/flutter/flutter.git <span class="token parameter variable">-b</span> stable
+</code></pre></div><h2>配置环境变量</h2>
+<p>开始菜单<strong>搜索功能</strong>，搜索<code>env</code>，选择编辑环境变量
+<a href="https://imgtu.com/i/LaJVrn" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJVrn.png" alt="flutter7" loading="lazy"></a>
+系统变量中找到“path”，编辑，加入 flutter\bin 目录的完整路径<br>
+<a href="https://imgtu.com/i/LaJZbq" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJZbq.png" alt="flutter8" loading="lazy"></a>
+<a href="https://imgtu.com/i/LaJmV0" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJmV0.png" alt="flutter9" loading="lazy"></a>
+配置好环境变量后，就可以通过命令提示符访问了</p>
+<div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code>$<span class="token operator">&gt;</span>where flutter dart
+</code></pre></div><figure><a href="https://imgtu.com/i/LaJl24" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJl24.png" alt="flutter10" tabindex="0" loading="lazy"></a><figcaption>flutter10</figcaption></figure>
+<h2>更多关于Flutter的安装配置请访问官方网站</h2>
+<p><a href="https://flutter.cn/docs/get-started/install" target="_blank" rel="noopener noreferrer">flutter-install</a></p>
+<hr>
+<h2>好了，前面的弄好了之后，开始正式使用Flutter吧！</h2>
+<h1>使用</h1>
+<h2>New Flutter Project</h2>
+<p>创建flutter项目<br>
+<a href="https://imgtu.com/i/LaJQGF" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJQGF.png" alt="flutter11" loading="lazy"></a>
+选中Flutter,在Flutter SDK path中添加刚刚下载Flutter SDK放置的目录，记住一定是<code>\flutter</code>根目录
+<a href="https://imgtu.com/i/LaJMPU" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJMPU.png" alt="flutter12" loading="lazy"></a>
+<a href="https://imgtu.com/i/LaJ1xJ" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJ1xJ.png" alt="flutter13" loading="lazy"></a>
+新建项目会导入依赖，耐心等待
+<a href="https://imgtu.com/i/LaJ8M9" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJ8M9.png" alt="flutter14" loading="lazy"></a></p>
+<h2>Run Flutter App</h2>
+<p>直接使用创建flutter的模板run！
+<a href="https://imgtu.com/i/LaJGrR" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJGrR.png" alt="flutter15" loading="lazy"></a>
+运行Flutter，报错了，不过不要着急，遇到问题不要慌，上网一搜总能找到答案
+<a href="https://imgtu.com/i/LaJJq1" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJJq1.png" alt="flutter16" loading="lazy"></a>
+报错的问题是：</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>Finished with error: Failed to bind web development server:
+SocketException: Failed to create server socket (OS Error: Failed to start accept), address = localhost, port = 51321
+</code></pre></div><p>应该是需要配置“Additional run args”参数
+<a href="https://imgtu.com/i/LaJtVx" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJtVx.png" alt="flutter17" loading="lazy"></a>
+<a href="https://imgtu.com/i/LaJNa6" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJNa6.png" alt="flutter18" loading="lazy"></a></p>
+<p>Additional run args:<code>--web-port=8080 --web-hostname=127.0.0.1</code></p>
+<p>再次运行，成功！<br>
+<a href="https://imgtu.com/i/LaJBxH" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJBxH.png" alt="成功了" loading="lazy"></a>
+web端还是响应式布局，满足任何设备浏览器访问
+<a href="https://imgtu.com/i/LaJrMd" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJrMd.png" alt="响应1" loading="lazy"></a>
+<a href="https://imgtu.com/i/LaJssA" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJssA.png" alt="响应2" loading="lazy"></a></p>
+<h3>热部署（hot reload）</h3>
+<p>在<code>lib/main.dart</code>中修改字符串
+<a href="https://imgtu.com/i/LaJdPO" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJdPO.png" alt="hotreload1" loading="lazy"></a>
+<a href="https://imgtu.com/i/LaJ0Re" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJ0Re.png" alt="hotreload2" loading="lazy"></a>
+非常快的热部署到应用上！
+<a href="https://imgtu.com/i/LaJwGD" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJwGD.png" alt="查看1" loading="lazy"></a></p>
+<h2>编写第一个Flutter应用</h2>
+<p>根据<a href="https://flutter.cn/docs/get-started/codelab" target="_blank" rel="noopener noreferrer">官网</a>的教程编写一个<code>英语单词滚动视图APP</code>
+将下面这段代码覆盖到<code>lib/main.dart</code>中，</p>
+<div class="language-dart" data-ext="dart" data-title="dart"><pre class="language-dart"><code><span class="token comment">// Copyright 2018 The Flutter team. All rights reserved.</span>
+<span class="token comment">// Use of this source code is governed by a BSD-style license that can be</span>
+<span class="token comment">// found in the LICENSE file.</span>
+
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token class-name">MyApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MyApp</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token class-name">MyApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token class-name">Key</span><span class="token operator">?</span> key<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword">super</span><span class="token punctuation">(</span>key<span class="token punctuation">:</span> key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      title<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">'Welcome to Flutter'</span></span><span class="token punctuation">,</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+        appBar<span class="token punctuation">:</span> <span class="token class-name">AppBar</span><span class="token punctuation">(</span>
+          title<span class="token punctuation">:</span> <span class="token keyword">const</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Welcome to Flutter'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+        body<span class="token punctuation">:</span> <span class="token keyword">const</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
+          child<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Hello World'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>创建<code>Material Design</code>风格的应用。在 pubspec.yaml 文件的 flutter 部分选择加入<code>uses-material-design: true</code>会是一个明智之举，通过这个可以让您使用更多 Material 的特性，比如其预定义好的图标集。<br>
+<a href="https://imgtu.com/i/LaJUIK" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/04/18/LaJUIK.png" alt="flutter19" loading="lazy"></a></p>
+<p>TO Be Continue...</p>
+]]></content:encoded>
+      <enclosure url="https://s1.ax1x.com/2022/04/18/LaJ2If.png" type="image/png"/>
+    </item>
+    <item>
+      <title>专注清单</title>
+      <link>https://shiori.fun/posts/focustodo.html</link>
+      <guid>https://shiori.fun/posts/focustodo.html</guid>
+      <source url="https://shiori.fun/rss.xml">专注清单</source>
+      <description>专注清单，一款提高效率有效管理时间和任务管理的工具。 </description>
+      <category>生产力</category>
+      <pubDate>Tue, 23 Mar 2021 18:27:40 GMT</pubDate>
+      <content:encoded><![CDATA[<p><a href="https://www.focustodo.cn/#products" target="_blank" rel="noopener noreferrer">专注清单</a>，一款提高效率有效管理时间和任务管理的工具。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>jeecg</title>
+      <link>https://shiori.fun/posts/jeecg.html</link>
+      <guid>https://shiori.fun/posts/jeecg.html</guid>
+      <source url="https://shiori.fun/rss.xml">jeecg</source>
+      <description>jeecg开发平台二次开发研究以及笔记 关于jeecg jeecg官方网站 | jeecg源码下载 jeecg是一款基于代码生成器“低代码”开发平台的一个开源项目，帮助解决Java项目70%的重复工作，让开发更多关注业务逻辑。既能快速提高开发效率，帮助公司节省成本，同时又不失灵活性！ 拥有众多的开发插件，有在线编辑，移动开发，流程设计，大屏报表，工作流...</description>
+      <category>教程</category>
+      <pubDate>Fri, 08 Jan 2021 00:27:41 GMT</pubDate>
+      <content:encoded><![CDATA[<p>jeecg开发平台二次开发研究以及笔记</p>
+<!-- more -->
+<h1>关于jeecg</h1>
+<p><a href="http://www.jeecg.com/" target="_blank" rel="noopener noreferrer">jeecg官方网站</a> <span>|</span> <a href="https://github.com/zhangdaiscott/jeecg-boot" target="_blank" rel="noopener noreferrer">jeecg源码下载</a>
+jeecg是一款基于代码生成器“低代码”开发平台的一个开源项目，帮助解决Java项目70%的重复工作，让开发更多关注业务逻辑。既能快速提高开发效率，帮助公司节省成本，同时又不失灵活性！
+拥有众多的开发插件，有在线编辑，移动开发，流程设计，大屏报表，工作流，OA办公，微信管家等众多功能。
+采用的最新主流前后分离式框架（Springboot+Mybatis+Antd），代码生成器依赖性低，扩展性强，可灵活实现二次开发。</p>
+<h1>使用jeecg</h1>
+<h2>jeecg开发所需要使用到的工具</h2>
+<p>详情查看<a href="http://doc.jeecg.com/2043872" target="_blank" rel="noopener noreferrer">jeecg官方文档</a>
+<strong>开发工具包</strong> 链接: https://pan.baidu.com/s/1RBcJ2Nc3ZGR_4lCRoCiv3g 提取码: jxrw （百度网盘链接）；https://cloud.189.cn/t/euEnAjjYj2U3 访问码:9i12  （天翼云盘链接）。</p>
+<h2>安装教程</h2>
+<h3>jdk</h3>
+<h3>mysql</h3>
+<h3>navicat</h3>
+<h3>nodejs</h3>
+<p>Node.js安装及环境配置（Windows）
+参考https://my.oschina.net/jeecg/blog/4277939
+说明：这里的环境配置主要配置的是npm安装的全局模块所在的路径，以及缓存cache的路径，之所以要配置，是因为以后在执行类似：npm install express [-g] （后面的可选参数-g，g代表global全局安装的意思）的安装语句时，会将安装的模块安装到【C:\Users\用户名\AppData\Roaming\npm】路径中，占C盘空间。
+例如：我希望将全模块所在路径和缓存路径放在我node.js安装的文件夹中，则在我安装的文件夹【F:\workspace\node.js】下创建两个文件夹【node_global】及【node_cache】
+创建完两个空文件夹之后，打开cmd命令窗口，输入</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>npm config set prefix "F:\workspace\node.js\node_global"
+npm config set cache "F:\workspace\node.js\node_cache"
+</code></pre></div><p>注意：引号内是指你的nodejs安装路径
+Windows下Yarn安装与使用 参考https://my.oschina.net/jeecg/blog/4278012</p>
+<h3>redis</h3>
+<p>redis安装包<a href=""></a>，上面的开发工具包里也有，自由选择。
+参考https://www.runoob.com/redis/redis-install.html
+下载好redis后解压，
+打开cmd命令窗口，<code>windows</code>键加<code>R</code>键，
+使用cd命令进入到你的redis解压目录：</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>cd\
+d:
+cd D:\redis64-3.0.501
+redis-server.exe redis.windows.conf
+</code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/a1046700338/a1046700338.github.io@2.0/images/jeecg_01.jpg" alt="" loading="lazy">
+<img src="https://cdn.jsdelivr.net/gh/a1046700338/a1046700338.github.io@2.0/images/jeecg_02.jpg" alt="" loading="lazy">
+然后再启动一个 cmd 窗口，原来的不要关闭，不然就无法访问服务端了。
+切换到 redis 目录下</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>cd\
+d:
+cd D:\redis64-3.0.501
+</code></pre></div><p>运行：</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>redis-cli.exe -h 127.0.0.1 -p 6379
+</code></pre></div><p>设置键值对：</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>set myKey abc
+</code></pre></div><p>取出键值对：</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>get myKey
+</code></pre></div><p>127.0.0.1 是本机 IP ，6379 是 redis 服务端口。现在输入 PING 命令
+redis 127.0.0.1:6379&gt;<code>ping</code>
+PONG
+以上说明我们已经成功安装了redis。</p>
+<h3>maven</h3>
+<h2>环境配置</h2>
+<p>后端开发建议采用IDEA，方便多Maven模块开发，热部署请集成JRebel。
+参考http://doc.jeecg.com/2043872
+jdk8安装<a href=""></a>
+Maven安装<a href=""></a>
+<a href="https://blog.csdn.net/weixin_42831477/article/details/82229436" target="_blank" rel="noopener noreferrer">IDEA热部署JRebel安装</a></p>
+<h2>安装</h2>
+<p>安装好jdk，mysql，navicat，nodejs，redis，maven以及集成开发环境（eclipse或idea或webstrom）后，</p>
+<h2>导入Maven项目</h2>
+<p>
+
+参考https://blog.csdn.net/weixin_43151608/article/details/100121724</p>
+<h2>启动项目</h2>
+]]></content:encoded>
+      <enclosure url="https://cdn.jsdelivr.net/gh/a1046700338/a1046700338.github.io@2.0/images/jeecg_01.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>lively_aplayerjs</title>
+      <link>https://shiori.fun/posts/lively-aplayerjs.html</link>
+      <guid>https://shiori.fun/posts/lively-aplayerjs.html</guid>
+      <source url="https://shiori.fun/rss.xml">lively_aplayerjs</source>
+      <description>关于LivelyWallpaper指路☞ 由于LivelyWallpaper的特性，可以将网页代码作为壁纸背景。 所以我就有了接下来的想法~ 我想要做一个aplayerjs的音乐在线播放壁纸 aplayer Wow, such a beautiful HTML5 music player 这是一个漂亮的H5音乐播放器 看文档📕 可以通过npm或yar...</description>
+      <category>教程</category>
+      <pubDate>Wed, 23 Mar 2022 22:14:07 GMT</pubDate>
+      <content:encoded><![CDATA[<p>关于LivelyWallpaper指路<a href="https://sakurafeiyu.gitee.io/2022/01/07/lively/" target="_blank" rel="noopener noreferrer">☞</a><br>
+由于LivelyWallpaper的特性，可以将网页代码作为壁纸背景。<br>
+所以我就有了接下来的想法~</p>
+<!-- more -->
+<h1>我想要做一个aplayerjs的音乐在线播放壁纸</h1>
+<p><a href="https://aplayer.js.org/#/" target="_blank" rel="noopener noreferrer">aplayer</a></p>
+<blockquote>
+<p>Wow, such a beautiful HTML5 music player
+这是一个漂亮的H5音乐播放器</p>
+</blockquote>
+<h1><a class="header-anchor" href="#看文档📕"><span>看文档</span></a><a href="https://aplayer.js.org/#/home" target="_blank" rel="noopener noreferrer">📕</a></h1>
+<p>可以通过npm或yarn（<a href="">npm是什么?</a>）安装<br>
+而我选择直接引入</p>
+<div class="language-html" data-ext="html" data-title="html"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>liveAplayer<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>aplayer<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>APlayer.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+		<span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token string">"hello,liveAplayer"</span><span class="token punctuation">;</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">const</span> ap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">APlayer</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    	<span class="token literal-property property">container</span><span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'aplayer'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    	<span class="token literal-property property">audio</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    		<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span><span class="token comment">//歌名</span>
+    		<span class="token literal-property property">artist</span><span class="token operator">:</span> <span class="token string">'artist'</span><span class="token punctuation">,</span><span class="token comment">//艺术家</span>
+    		<span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">'url.mp3'</span><span class="token punctuation">,</span><span class="token comment">//歌曲</span>
+    		<span class="token literal-property property">cover</span><span class="token operator">:</span> <span class="token string">'cover.jpg'</span><span class="token comment">//歌曲图片</span>
+    	<span class="token punctuation">}</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p><a href="https://www.picbed.cn/image/roxU3" target="_blank" rel="noopener noreferrer"><img src="https://b.picbed.cn/file/picbed-cn/2022/03/24/la1.md.png" alt="la1.md.png" loading="lazy"></a>
+更多参数，<a href="https://aplayer.js.org/#/zh-Hans/?id=%E5%8F%82%E6%95%B0" target="_blank" rel="noopener noreferrer">参见</a><br>
+我想要引入我的网易云歌单，所以我需要用到<a href="https://github.com/metowolf/MetingJS" target="_blank" rel="noopener noreferrer">MetingJS</a><br>
+快速开始</p>
+<div class="language-HTML" data-ext="HTML" data-title="HTML"><pre class="language-HTML"><code>&lt;!-- require APlayer --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"&gt;&lt;/script&gt;
+&lt;!-- require MetingJS --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"&gt;&lt;/script&gt;
+
+&lt;meting-js
+	server="netease"
+	type="playlist"
+	id="60198"&gt;
+&lt;/meting-js&gt;
+</code></pre></div><div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>server:音乐服务器提供商，网易云orQQor酷狗等等
+type:显示类型，建议选择playlist
+id:音乐源的歌单id，如'https://music.163.com/#/playlist?id=2130110815'，这串url，id就为2130110815
+auto:音乐链接，netease, tencent, xiami
+autoplay:设置是否自动播放，true or false
+theme:主题，可自定义颜色
+loop:是否循环播放，'all', 'one', 'none' ，分别是，全部播放完毕后循环，循环一次，不循环
+order:默认为list
+preload:预加载，默认为auto
+volume:播放音量，值在1到0之间，默认值70%
+</code></pre></div><div class="language-HTML" data-ext="HTML" data-title="HTML"><pre class="language-HTML"><code>&lt;!DOCTYPE html&gt;
+&lt;head&gt;
+	&lt;meta charset="utf-8"&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+	&lt;title&gt;liveAplayer&lt;/title&gt;
+	&lt;!-- require APlayer --&gt;
+	&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"&gt;
+	&lt;script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"&gt;
+		const ap = new APlayer({
+			container: document.getElementById('player'),
+			fixed: false,//底部吸盘模式
+		});
+	&lt;/script&gt;
+	&lt;!-- require MetingJS --&gt;
+	&lt;script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"&gt;&lt;/script&gt;
+	&lt;meting-js
+		server="netease"
+		type="playlist"
+		id="2130110815"
+		fixed="true"
+		autoplay="false"&gt;
+	&lt;/meting-js&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h1&gt;&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><h1>代码实现</h1>
+<div class="language-HTML" data-ext="HTML" data-title="HTML"><pre class="language-HTML"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset="utf-8"&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+	&lt;!-- require APlayer --&gt;
+	&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"&gt;
+	&lt;script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"&gt;
+		const ap = new APlayer({
+    		container: document.getElementById('player'),
+    		listFolded:true,
+    	});
+	&lt;/script&gt;
+	&lt;!-- require MetingJS --&gt;
+	&lt;script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"&gt;&lt;/script&gt;
+	&lt;meting-js
+		server="netease"
+		type="playlist"
+		id="2130110815"
+		autoplay="false"&gt;
+	&lt;/meting-js&gt;
+	&lt;title&gt;liveAplayer&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id="app"&gt;
+	&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><p>效果图
+<a href="https://www.picbed.cn/image/roPJa" target="_blank" rel="noopener noreferrer"><img src="https://b.picbed.cn/file/picbed-cn/2022/03/24/la3.md.png" alt="la3.md.png" loading="lazy"></a>
+to be continue...
+明天写style</p>
+<h2>将播放器居中</h2>
+<p>让播放器位置居中，使桌面看起来更赏心悦目</p>
+]]></content:encoded>
+      <enclosure url="https://b.picbed.cn/file/picbed-cn/2022/03/24/la1.md.png" type="image/png"/>
+    </item>
+    <item>
+      <title>maven</title>
+      <link>https://shiori.fun/posts/maven.html</link>
+      <guid>https://shiori.fun/posts/maven.html</guid>
+      <source url="https://shiori.fun/rss.xml">maven</source>
+      <description> Maven是一个软件项目管理和理解工具。基于根据项目对象模型（POM）的概念，Maven可以管理项目的从中心信息构建、报告和记录。 maven 官网 | 教程 | 下载地址 | 历史版本 Maven阿里镜像配置 https://developer.aliyun.com/mirror/maven Maven 引入外部依赖 在你的 pom.xml 文件&amp;lt;...</description>
+      <category>教程</category>
+      <pubDate>Tue, 10 May 2022 01:12:43 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>Maven是一个软件项目管理和理解工具。基于根据项目对象模型（POM）的概念，Maven可以管理项目的从中心信息构建、报告和记录。</p>
+</blockquote>
+<!-- more -->
+<h1>maven</h1>
+<p><a href="https://maven.apache.org/" target="_blank" rel="noopener noreferrer">官网</a> | <a href="https://www.runoob.com/maven/maven-setup.html" target="_blank" rel="noopener noreferrer">教程</a> | <a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener noreferrer">下载地址</a> | <a href="https://archive.apache.org/dist/maven/maven-3/" target="_blank" rel="noopener noreferrer">历史版本</a></p>
+<h2>Maven阿里镜像配置</h2>
+<p>https://developer.aliyun.com/mirror/maven</p>
+<h2>Maven 引入外部依赖</h2>
+<p>在你的 pom.xml 文件<code>&lt;denpendencies&gt;&lt;/denpendencies&gt;</code>节点中加入你要引用的文件信息：</p>
+<div class="language-xml" data-ext="xml" data-title="xml"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>[GROUP_ID]<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span><span class="token comment">&lt;!-- 库名称，也可以自定义 --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>[ARTIFACT_ID]<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span><span class="token comment">&lt;!--库名称，也可以自定义--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>[VERSION]<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span><span class="token comment">&lt;!--版本号--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">&gt;</span></span>system<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">&gt;</span></span> <span class="token comment">&lt;!--作用域--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>systemPath</span><span class="token punctuation">&gt;</span></span>${project.basedir}/src/main/resources/Name_Your_JAR.jar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>systemPath</span><span class="token punctuation">&gt;</span></span> <span class="token comment">&lt;!--项目根目录下的lib文件夹下--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2>IntelliJ IDEA 已经内建了对 Maven 的支持</h2>
+<p>https://www.runoob.com/maven/maven-intellij.html</p>
+<h2>Maven 项目文档</h2>
+<p>https://www.runoob.com/maven/maven-project-documents.html</p>
+<p>修改 pom.xml，添加以下配置</p>
+<div class="language-xml" data-ext="xml" data-title="xml"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span><span class="token punctuation">&gt;</span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginManagement</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.apache.maven.plugins<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>maven-site-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>3.3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.apache.maven.plugins<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>maven-project-info-reports-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>2.7<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginManagement</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">&gt;</span></span>
+ ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>在项目根目录下执行命令：
+<code>mvn site</code>
+To be Continue...</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>mysql</title>
+      <link>https://shiori.fun/posts/mysql.html</link>
+      <guid>https://shiori.fun/posts/mysql.html</guid>
+      <source url="https://shiori.fun/rss.xml">mysql</source>
+      <description>mysql windows10安装 mysql数据库 官网 | 下载地址 安装mysql 如图 OYnIdf.png OYn5eP.png OYnhLt.png OYnWQA.png OYn2zd.png OYnoo8.png 等待下载完成 OYn7FS.png 运行 OYnHJg.png 接受条款，next下一步 OYnbWQ.png 选择Custo...</description>
+      <category>教程</category>
+      <pubDate>Tue, 10 May 2022 01:12:36 GMT</pubDate>
+      <content:encoded><![CDATA[<p>mysql windows10安装</p>
+<!-- more -->
+<h1>mysql数据库</h1>
+<p><a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer">官网</a> | <a href="https://dev.mysql.com/downloads/installer/" target="_blank" rel="noopener noreferrer">下载地址</a></p>
+<h2>安装mysql</h2>
+<p>如图<br>
+<a href="https://imgtu.com/i/OYnIdf" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYnIdf.png" alt="OYnIdf.png" loading="lazy"></a>
+<a href="https://imgtu.com/i/OYn5eP" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYn5eP.png" alt="OYn5eP.png" loading="lazy"></a>
+<a href="https://imgtu.com/i/OYnhLt" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYnhLt.png" alt="OYnhLt.png" loading="lazy"></a>
+<a href="https://imgtu.com/i/OYnWQA" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYnWQA.png" alt="OYnWQA.png" loading="lazy"></a>
+<a href="https://imgtu.com/i/OYn2zd" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYn2zd.png" alt="OYn2zd.png" loading="lazy"></a>
+<a href="https://imgtu.com/i/OYnoo8" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYnoo8.png" alt="OYnoo8.png" loading="lazy"></a>
+等待下载完成
+<a href="https://imgtu.com/i/OYn7FS" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYn7FS.png" alt="OYn7FS.png" loading="lazy"></a>
+运行
+<a href="https://imgtu.com/i/OYnHJg" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYnHJg.png" alt="OYnHJg.png" loading="lazy"></a>
+接受条款，next下一步
+<a href="https://imgtu.com/i/OYnbWQ" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYnbWQ.png" alt="OYnbWQ.png" loading="lazy"></a>
+选择Custom，自定义安装，next下一步
+<a href="https://imgtu.com/i/OYnqzj" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYnqzj.png" alt="OYnqzj.png" loading="lazy"></a>
+将图中这些组件选中添加到右边
+<a href="https://imgtu.com/i/OYnXyn" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYnXyn.png" alt="OYnXyn.png" loading="lazy"></a>
+<a href="https://imgtu.com/i/OYnOQs" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYnOQs.png" alt="OYnOQs.png" loading="lazy"></a>
+next下一步
+<a href="https://imgtu.com/i/OYnjLq" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYnjLq.png" alt="OYnjLq.png" loading="lazy"></a>
+next下一步
+<a href="https://imgtu.com/i/OYnxe0" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYnxe0.png" alt="OYnxe0.png" loading="lazy"></a>
+next下一步
+<a href="https://imgtu.com/i/OYnzwV" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYnzwV.png" alt="OYnzwV.png" loading="lazy"></a>
+next下一步
+<a href="https://imgtu.com/i/OYuSoT" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYuSoT.png" alt="OYuSoT.png" loading="lazy"></a>
+输入密码，重复密码，一定要记住自己的密码，next下一步
+<a href="https://imgtu.com/i/OYu9FU" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYu9FU.png" alt="OYu9FU.png" loading="lazy"></a>
+next下一步
+<a href="https://imgtu.com/i/OYuCYF" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYuCYF.png" alt="OYuCYF.png" loading="lazy"></a>
+Execute
+<a href="https://imgtu.com/i/OYuPW4" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYuPW4.png" alt="OYuPW4.png" loading="lazy"></a>
+安装成功，finish
+<a href="https://imgtu.com/i/OYuFSJ" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYuFSJ.png" alt="OYuFSJ.png" loading="lazy"></a>
+<a href="https://imgtu.com/i/OYukl9" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYukl9.png" alt="OYukl9.png" loading="lazy"></a>
+<a href="https://imgtu.com/i/OYuAyR" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYuAyR.png" alt="OYuAyR.png" loading="lazy"></a>
+安装完成后，会弹出mysql命令程序和mysql可视化工作台
+<a href="https://imgtu.com/i/OYuEO1" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYuEO1.png" alt="OYuEO1.png" loading="lazy"></a>
+以后mysql软件可以在开始菜单中找到
+<a href="https://imgtu.com/i/OYuZex" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2022/05/10/OYuZex.png" alt="OYuZex.png" loading="lazy"></a></p>
+<p>To be Continue...</p>
+]]></content:encoded>
+      <enclosure url="https://s1.ax1x.com/2022/05/10/OYnIdf.png" type="image/png"/>
+    </item>
+    <item>
+      <title>焕然一新的blog</title>
+      <link>https://shiori.fun/posts/newBlog.html</link>
+      <guid>https://shiori.fun/posts/newBlog.html</guid>
+      <source url="https://shiori.fun/rss.xml">焕然一新的blog</source>
+      <description>shiori.fun 博客框架更换为VuePress 博客焕然一新！ 为了更好的使用和学习Vue，所以我决定使用VuePress框架来驱动博客。 通过vercel来自动化部署项目，实现解放双手。 那么它的好处是什么呢？它可以： 支持vue，vue的特性，它统统都有，我们可以直接在vuepress上进行组件的编写 文档化支持丰富，作为博客也是不错的选择 ...</description>
+      <category>blog</category>
+      <pubDate>Tue, 04 Apr 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>shiori.fun</p>
+<!-- more -->
+<h1>博客框架更换为VuePress</h1>
+<p>博客焕然一新！<br>
+为了更好的使用和学习Vue，所以我决定使用VuePress框架来驱动博客。<br>
+通过<code>vercel</code>来自动化部署项目，实现解放双手。<br>
+那么它的好处是什么呢？它可以：</p>
+<ul>
+<li>支持vue，vue的特性，它统统都有，我们可以直接在vuepress上进行组件的编写</li>
+<li>文档化支持丰富，作为博客也是不错的选择</li>
+<li>社区支持，丰富的插件，以及任何有关于vue，或是支持vue的插件，你都可以部署到你的vuepress上</li>
+</ul>
+<h1>主题使用</h1>
+<p>Blog采用VuePress驱动markdown文档，已<a href="https://vuepress.vuejs.org/zh/" target="_blank" rel="noopener noreferrer">hope</a>为VuePress主题使用。</p>
+<h2>如何使用该主题</h2>
+<p>克隆我的仓库<a href="https://github.com/shiori2024/shiori-blog" target="_blank" rel="noopener noreferrer">GitHub</a><br>
+当然你也可以直接去hope官网进行主题安装</p>
+
+<p>随后</p>
+<div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token function">npm</span> i
+</code></pre></div><p>如果你在使用 <code>npm</code> 的过程中，遇到依赖下载失败的情况，那么请使用<a href="https://github.com/coreybutler/nvm-windows" target="_blank" rel="noopener noreferrer">nvm</a></p>
+<h2>运行</h2>
+
+<h2>项目文件结构</h2>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>  &lt;docs&gt; → 由你指定的项目文件夹
+     │
+     ├── .github → github 配置文件，github aciton部署
+     │
+     ├── package.json →  项目索引文件
+     │
+     ├── .gitignore → git 配置文件
+     │
+     ├── CHANGELOG.MD → git commit 文件
+     │
+     │── src
+          ├── .vuepress (可选的) → 用于存放全局的配置、组件、静态资源等
+          │
+          ├── dist (默认的) → 构建输出目录
+          │
+          ├── public (可选的) → 静态资源目录
+          │
+          ├── styles (可选的) → 用于存放样式相关的文件
+          │
+          ├── config.{js,ts} (可选的) → 配置文件的入口文件
+          │
+          └── client.{js,ts} (可选的) → 客户端文件
+          │
+          ├── ... → 其他项目文档
+          ├── README.md → 项目主页
+
+</code></pre></div><h2>首页配置</h2>
+<p><a href="https://theme-hope.vuejs.press/zh/guide/blog/home.html" target="_blank" rel="noopener noreferrer">参考</a><br>
+你需要在相应的页面的<code>frontmatter</code>中，设置<code>home: true</code>和<code>layout: BlogHome</code>来使用博客主页。<br>
+你可以使用<code>heroText</code>设置主标题，并通过<code>tagline</code>设置副标题。</p>
+<h3>我的配置参考</h3>
+<div class="language-markdown" data-ext="md" data-title="md"><pre class="language-markdown"><code><span class="token title important"><span class="token punctuation">#</span> src/README.md</span>
+</code></pre></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>pcr</title>
+      <link>https://shiori.fun/posts/pcr.html</link>
+      <guid>https://shiori.fun/posts/pcr.html</guid>
+      <source url="https://shiori.fun/rss.xml">pcr</source>
+      <description>公主连接bot使用说明 此篇文章仅供群704850078使用 Q群公主连接机器人面板&amp;会战面板链接 面板使用 点击链接来到如下页面 点击登录，看见&amp;quot;会战系统登录&amp;quot;，点密码一栏会提示你&amp;quot;可以私聊机器人重置密码&amp;quot; 公会战命令 |关键词 |说明 | |手册 |发送手册，即可查看公会战使用手册 | |面板 |发送面板，即可进入公会战面板 | |加入全部成员 |...</description>
+      <category>游戏</category>
+      <pubDate>Mon, 28 Dec 2020 22:01:55 GMT</pubDate>
+      <content:encoded><![CDATA[<p>公主连接bot使用说明</p>
+<!-- more -->
+<h1>此篇文章仅供群704850078使用</h1>
+<h2><a class="header-anchor" href="#q群公主连接机器人面板-会战面板链接"><span></span></a><a href="http://sakurafeiyu.top:9222/" title="点我点我" target="_blank" rel="noopener noreferrer">Q群公主连接机器人面板&amp;会战面板链接</a></h2>
+<h1>面板使用</h1>
+<h2>点击链接来到如下页面</h2>
+<figure><img src="https://cdn.jsdelivr.net/gh/a1046700338/a1046700338.github.io@2.0/images/Screenshot_2020-12-28-22-07-08-940_com.quark.brow.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<h2>点击登录，看见"会战系统登录"，点密码一栏会提示你"可以私聊机器人重置密码"</h2>
+<figure><img src="https://cdn.jsdelivr.net/gh/a1046700338/a1046700338.github.io@2.0/images/Snipaste_2020-12-28_22-11-51.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<h2>公会战命令</h2>
+<p>|关键词			|说明																		|
+|手册			|发送手册，即可查看公会战使用手册											|
+|面板			|发送面板，即可进入公会战面板												|
+|加入全部成员	|拥有管理员权限可以直接发送这个命令，让群内成员全部都加入公会				|
+|报刀2000000	|报刀的格式是：报刀空格数字伤害，此外你可以帮别人报刀，报刀空格数字伤害@他	|
+更多公会战命令请查看<a href="https://yobot.win/usage/manual/" target="_blank" rel="noopener noreferrer">这个链接</a></p>
+<h2>公会战面板介绍</h2>
+<p>代写</p>
+<h1>栞栞说明</h1>
+<p>本机器人是使用HoshinoBot（基于 nonebot 框架的QQ机器人）和yobot公会战辅助机器人，以及GitHub上基于hoshinobot框架的开源插件，
+本机器人使用的框架均为开源程序，进行二次修改，因地制宜的，达到公主连结游戏辅助和群聊机器人使用的效果。</p>
+<h1>最新版本 kankan-v1.2.2</h1>
+<h2>使用帮助</h2>
+<h3>贵族决斗相关指令</h3>
+<ol>
+<li>贵族签到(每日一次)</li>
+<li>查询贵族</li>
+<li>贵族决斗+艾特</li>
+<li>领金币/查金币</li>
+<li>贵族舞会(招募女友)</li>
+<li>查女友+角色名</li>
+<li>升级贵族</li>
+<li>重置金币+qq (限群主)</li>
+<li>重置角色+qq (限群主)</li>
+<li>重置决斗(限管理，决
+斗卡住时用)
+11.分手+角色名(需分手费)</li>
+<li>贵族等级表</li>
+<li>用XXX声望兑换金币</li>
+<li>转账(为@qq转账xxx金币)</li>
+<li>女友交易(用xxx金币与@qq交易女友+角色名)</li>
+<li>dlc帮助(增加dlc角色)</li>
+<li>加冕称帝（由国王提升至皇帝）</li>
+<li>好感系统帮助</li>
+<li>确认重开（删号重来）</li>
+<li>离婚+角色名（与某角色离婚）</li>
+<li>皇室婚礼+角色名（正房结婚）</li>
+<li>贵族婚礼+角色名（二房结婚）</li>
+<li>飞升成神（由皇帝提升至神）</li>
+<li>梭哈支持XX号（特殊的支持）</li>
+<li>购买上限（皇帝以上购买女友上限）</li>
+<li>初始化本群庆典（初始化本群数据，用以开启庆典）</li>
+<li>开启（关闭）本群金币/签到/梭哈倍率/免费招募/声望招募庆典（开关庆典）</li>
+<li>查询庆典（查询本群正在进行的庆典状况）</li>
+<li>武器列表(更换武器，默认为俄罗斯左轮)</li>
+<li>贵族胜场排行（查看贵族胜场排行）</li>
+</ol>
+<p>一个女友只属于一位群友
+声望只能由决斗获得</p>
+<h3>好感系统帮助</h3>
+<ol>
+<li>查好感+女友名</li>
+<li>贵族约会+女友名(1天限1次)</li>
+<li>买礼物(300金币，一天限5次）</li>
+<li>送礼+女友名</li>
+<li>用xx与[艾特群友]交换xx
+例: 用热牛奶与@果的坚强交换书</li>
+<li>买情报+女友名(500金币，可了解女友喜好)</li>
+<li>礼物仓库(查询礼物仓库)</li>
+<li>好感列表
+注:
+通过约会或者送礼可以提升好感
+决斗输掉某女友会扣除50好感，不够则被抢走
+女友喜好与原角色无关，只是随机生成，仅供娱乐</li>
+</ol>
+<h3><code>lssv</code>查看开启/关闭功能列表</h3>
+<p>具体应用如下：
+<code>	开启+空格+功能名称</code></p>
+<h3>查询角色谁是的问题</h3>
+<p>具体应用如下：
+格式</p>
+]]></content:encoded>
+      <enclosure url="https://cdn.jsdelivr.net/gh/a1046700338/a1046700338.github.io@2.0/images/Screenshot_2020-12-28-22-07-08-940_com.quark.brow.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>python学习随笔</title>
+      <link>https://shiori.fun/posts/python-Studynotes.html</link>
+      <guid>https://shiori.fun/posts/python-Studynotes.html</guid>
+      <source url="https://shiori.fun/rss.xml">python学习随笔</source>
+      <description>啊啊我是python零基础萌新，初学python慢慢成长的python学习记录！ 2021/7/2【hello,python】 提示 代码块之间缩进有严格的要求，层级关系 </description>
+      <category>python</category>
+      <category>学习</category>
+      <pubDate>Thu, 15 Jul 2021 11:16:54 GMT</pubDate>
+      <content:encoded><![CDATA[<p>啊啊我是python零基础萌新，初学python慢慢成长的python学习记录！</p>
+<!-- more -->
+<h1>2021/7/2【hello,python】</h1>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code># @Time:2021/7/2 10:20
+# @Author:hetianle
+# @File:demo.py
+# @Software:Pycharm
+
+#score = 2
+
+score = int(input("请输入你的分数:"))
+
+if score &gt; 100:
+    print("sorry,满分为100分")
+if score == 100:
+    print("你太棒了！恭喜你考了满分!")
+else:
+    if score &lt; 100 and score &gt;= 60:
+        print("同学你很优秀")
+    else:
+        if score &lt; 60 and score &gt;= 50:
+            print("同学加油！还差一点就能及格了")
+        elif score &lt; 50 and score &gt;= 0:
+            print("没关系下次努力")
+
+
+</code></pre></div><div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>代码块之间缩进有严格的要求，层级关系</p>
+</div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>school</title>
+      <link>https://shiori.fun/posts/school.html</link>
+      <guid>https://shiori.fun/posts/school.html</guid>
+      <source url="https://shiori.fun/rss.xml">school</source>
+      <description>shool 2021年一卡通食堂、热水、洗衣使用说明 2021-08-31 10:54:25 来源：一卡通中心 本篇文章数据来源均来自川工科易校园APP内公告 内容可能存在滞后，仅供参考 一、校园一卡通的介绍 1、身份识别 校园一卡通可以在图书馆借书、进出校门身份 识别、宿舍登记等。校园卡是广大师生的有效身份 证明，请勿将校园卡转借他人使用。 2、消费...</description>
+      <category>教程</category>
+      <pubDate>Sun, 05 Sep 2021 08:13:40 GMT</pubDate>
+      <content:encoded><![CDATA[<p>shool</p>
+<!-- more -->
+<h1>2021年一卡通食堂、热水、洗衣使用说明</h1>
+<blockquote>
+<p>2021-08-31 10:54:25
+来源：一卡通中心
+本篇文章数据来源均来自川工科易校园APP内公告
+内容可能存在滞后，仅供参考</p>
+</blockquote>
+<h2>一、校园一卡通的介绍</h2>
+<p>1、身份识别
+校园一卡通可以在图书馆借书、进出校门身份
+识别、宿舍登记等。校园卡是广大师生的有效身份
+证明，请勿将校园卡转借他人使用。
+2、消费
+校园一卡通可在食堂和超市消费、校医院就
+医、宿舍淋浴和洗衣等。
+3、消费限额
+为防止一卡通因实卡丢失或账户密码泄露的情
+况下被恶意消费，系统设置了单次消费限额。</p>
+<h2>二、卡户账号和密码</h2>
+<p>1、为方便借阅图书、实训中心上课、消费、考
+勤等，对学生统一使用入学后的学号作为一卡通唯
+一的账号。
+2、一卡通的密码分为服务密码和消费密码。服
+务密码在登录“校园一卡通APP”时使用，消费密码在
+消费或超过限制时使用。<strong>初始密码均为身份证后6
+位</strong>，身份证最后一位为X，则X用0代替（如果没有
+登记身份证号码，则默认为一卡通账号的后6位）。
+3、设置或修改用户密码
+登录一卡通APP后，在“我的-系统设置-账户与
+安全”和“我的-系统设置-支付设置”里根据提示设置或
+修改相应密码。
+<img src="https://img10.360buyimg.com/ddimg/jfs/t1/196986/8/6762/194172/61341006E826b5e03/d371f07eba72a0e0.jpg" alt="2.3.1.jpg" loading="lazy"></p>
+<p><img src="https://img12.360buyimg.com/ddimg/jfs/t1/6023/34/11399/111977/61341006Efee5c044/5df9730a1add869a.jpg" alt="2.3.2.jpg" loading="lazy">
+4.若忘记密码，请持本人身份证或学生证到一
+卡通服务中心修改。</p>
+<h2>三、账户充值</h2>
+<p>1、现金充值
+在规定时间到学校财务室现金充值（一卡通服
+务中心不受理充值业务）。
+2、线上充值
+通过手机下载易校园APP软件进行充值，可24
+小时通过线上充值一卡通账户和缴纳电费。
+四、一卡通实卡丢失
+如果不慎将一卡通实卡丢失，请在第一时间挂
+失，挂失后系统自动冻结一卡通账户，须本人持有
+效身份证件到一卡通服务中心解挂后才可继续使
+用。
+挂失方法：
+1、通过一卡通手机APP，“校园卡-卡挂失”;
+2、圈存机挂失：在校园内圈存机上，按照屏幕
+提示进行挂失；
+3、到一卡通服务中心挂失：前面两种方式都无
+法操作时，可持有效身份证件到一卡通服务中心办
+理挂失手续；
+解挂方法：
+1、找到丢失的实卡后，须由本人持卡和身份证
+到一卡通服务中心办理解挂手续;
+2、通过一卡通手机APP，“校园卡-卡解挂”，按
+提示操作；
+3、确认一卡通实卡无法找回，须持身份证到校园自助补卡机上补办一卡通实卡，补办成功后，原卡立即作废，账户上的余额可在新卡上使用。</p>
+<h2>五、校园一卡通操作流程</h2>
+<p>为保证一卡通用户账户安全，系统设置一卡通
+账号须与本人手机号码绑定，否则无法登录使用一
+卡通系统。
+1、下载手机APP
+各大手机应用商店市场-查找“易校园”，根据提示安
+装。
+2、注册并绑卡
+输入手机号码获取验证码完成注册
+进入首页，点击下方的的校园卡，输入搜索“四
+川工业科技学院”点击确认，然后输入个人信息进行
+校园卡绑定，绑卡成功后即可可正常使用。</p>
+<h2>六、热水使用说明</h2>
+<p>请按宿舍对应选择用水方式:
+1.娇子、鸿儒、银杏(1~3栋)热水使用方式保持不
+变，在易校园首页点击公寓洗澡，可以扫码和蓝牙搜索方式使用。由于通信原因，上述寝室水表绑实
+体卡用水效果不好，请使用手机端放水。
+2.银杏4、5栋、龔江宿舍热水使用方式：<br>
+A.刷一卡通卡片，刷卡显示预扣金额5元后即可，用完5元自
+动结束，如没使用完需再次刷卡，系统自动退回剩
+余金额，注意如果余额不够五元机器会提示E003错
+误代码，就是余额不够了，需要在易校园首页充
+值。<br>
+B.易校园首页点击公寓淋浴，扫机器上二维码，连接成功后点击设置预设金额，然后开启，即
+可用水，预设金额用完自动结束，如果需提前结束
+订单需点击手机端方块停止按钮即可结束订单，剩
+余金额自动退回账户。
+tips：使用B方法最方便哦，没有一卡通也能使用易校园APP洗热水澡</p>
+<h2>七、洗衣机使用</h2>
+<p>1.支持一卡通卡片刷卡消费，刷卡后按对应机器上
+的开始按钮即可，余款4元可以使用60分钟，洗完后
+手机端点击方块停止按钮，如果没用完会自动退回
+剩余金额。
+2.手机端，使用易校园首页扫码洗衣，扫码绑定后
+点击设置预设金额，1元对应15分钟，通常建议选择
+4元，可用60分钟，洗完后刷卡，如果没用完会自动
+退回剩余金额。</p>
+<h2>八、易校园APP下载</h2>
+<p><a href="https://lsmart.xiaofubao.com/" target="_blank" rel="noopener noreferrer">易校园官网</a>
+个大手机应用商店均有下载渠道，自行下载</p>
+<h2>九、说明</h2>
+<ul>
+<li>一卡通是一卡通，校园卡（校园手机卡）是手机卡，两者不是同一个概念</li>
+<li>使用易校园即可，新用户注册账号，手机号可任意，并不是非得校园卡</li>
+<li>...more</li>
+</ul>
+<h2>其他</h2>
+<ul>
+<li><a href="http://ai.scit.cn/unified_identity_logon/#/login" target="_blank" rel="noopener noreferrer">数字校园</a></li>
+<li><a href="http://scit.cn/" target="_blank" rel="noopener noreferrer">学校官网</a></li>
+<li><a href="https://www.yiban.cn/" target="_blank" rel="noopener noreferrer">易班</a></li>
+<li><a href="http://www.neea.edu.cn/" target="_blank" rel="noopener noreferrer">中国教育考试网</a></li>
+<li><a href="http://passport2.chaoxing.com/login?fid=&amp;newversion=true&amp;refer=http%3A%2F%2Fi.chaoxing.com" target="_blank" rel="noopener noreferrer">超星学习通网页登陆</a></li>
+<li><a href="https://www.5idream.net/" target="_blank" rel="noopener noreferrer">到梦空间</a></li>
+</ul>
+<h3>侵删</h3>
+]]></content:encoded>
+      <enclosure url="https://img10.360buyimg.com/ddimg/jfs/t1/196986/8/6762/194172/61341006E826b5e03/d371f07eba72a0e0.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>visio</title>
+      <link>https://shiori.fun/posts/visio.html</link>
+      <guid>https://shiori.fun/posts/visio.html</guid>
+      <source url="https://shiori.fun/rss.xml">visio</source>
+      <description>本教程将教学如何免费试用一个月Visio计划2 安装包下载地址在下方 首先来到visio官网，选择visio计划2，点击免费试用30天，如图 v1.png 然后填写注册账号信息，需要填写手机号和公司，公司就随便填，纳税人识别号随便填，手机号需要自己的手机号要接受验证码，地址和邮编也是随便填即可，创建密码需要大小写不能包含登录名和邮箱地址，创建的密码和登...</description>
+      <category>教程</category>
+      <pubDate>Wed, 13 Oct 2021 23:09:57 GMT</pubDate>
+      <content:encoded><![CDATA[<p>本教程将教学如何免费试用一个月Visio计划2</p>
+<!-- more -->
+<h2><a class="header-anchor" href="#安装包下载地址在下方"><span>安装包下载地址在</span></a><a href="https://sakurafeiyu.gitee.io/2021/10/13/visio/#Visio2019%E5%AE%89%E8%A3%85%E5%8C%85%EF%BC%88%E4%B8%89%E4%B8%AA%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5%E4%BB%BB%E9%80%89%E4%B8%80%EF%BC%89%EF%BC%9A" target="_blank" rel="noopener noreferrer">下方</a></h2>
+<ol>
+<li>首先来到visio<a href="https://www.microsoft.com/zh-cn/microsoft-365/visio/microsoft-visio-plans-and-pricing-compare-visio-options?activetab=tabs:primaryr1" target="_blank" rel="noopener noreferrer">官网</a>，选择visio计划2，点击免费试用30天，如图
+<img src="https://img11.360buyimg.com/ddimg/jfs/t1/212318/23/238/186946/6166f92fE57857a1d/d80c1f96d76714b1.png" alt="v1.png" loading="lazy"></li>
+<li>然后填写注册账号信息，需要填写手机号和公司，公司就随便填，<strong>纳税人识别号随便填</strong>，手机号需要自己的手机号要接受验证码，地址和邮编也是随便填即可，创建密码需要大小写不能包含登录名和邮箱地址，创建的密码和登录名最好自己记住。如图
+<img src="https://img12.360buyimg.com/ddimg/jfs/t1/211570/37/5100/59484/6166f94aE26691684/f3251f472ba72f18.png" alt="Snipaste_2021-10-13_23-13-36.png" loading="lazy"></li>
+<li>以上操作好后，Microsoft会发送一个邮件到你的邮箱地址，如图
+<img src="https://img10.360buyimg.com/ddimg/jfs/t1/215679/2/245/48596/6166f930Edf26ce91/e962423a671f72ec.png" alt="v2.png" loading="lazy">
+点击"how to add users"，然后点击"Microsoft 365 admin center"进入365管理界面，如图
+<img src="https://img12.360buyimg.com/ddimg/jfs/t1/171380/26/21645/395331/6166f931E47da5dde/41e7a2d92b5913af.png" alt="v3.png" loading="lazy"></li>
+<li>进入365管理界面后，可以管理和分配你的visio计划2许可证，<strong>可添加25个用户</strong>
+<img src="https://img12.360buyimg.com/ddimg/jfs/t1/212715/30/251/78331/616707f8E4bb160fe/5c5b3730976967f5.jpg" alt="v7.jpg" loading="lazy"></li>
+<li>添加用户
+<img src="https://img14.360buyimg.com/ddimg/jfs/t1/203427/39/11234/91168/6166f9d7E475bfc18/4e29e8b85066ab94.png" alt="v4.png" loading="lazy">
+<img src="https://img14.360buyimg.com/ddimg/jfs/t1/217905/12/228/75910/6166f9d8Eb2473d25/e3e4966f442c85c3.png" alt="v5.png" loading="lazy">
+姓名自己取，选项向我那样勾选就可，然后就是下一步，许可证选择"	Visio计划2"，然后下一步，下一步，点击添加完毕。
+<img src="https://img10.360buyimg.com/ddimg/jfs/t1/220195/18/175/63672/6166fae7Ed73f0fb9/eee43ae62cfe57d5.png" alt="v6.png" loading="lazy"></li>
+</ol>
+<h1>Visio的使用</h1>
+<h2>首先安装好Visio2019</h2>
+<p><img src="https://img10.360buyimg.com/ddimg/jfs/t1/175322/29/22866/2119854/61670094Ec743206d/7f3f361665ec4ef4.jpg" alt="1634140195036.jpg" loading="lazy">
+第五步后是pj激活教程，第五步前是安装教程，使用visio许可证账号登录即可。</p>
+<h2>Visio2019安装包（三个网盘下载链接任选一）：</h2>
+<ul>
+<li><a href="https://www.wenshushu.cn/" target="_blank" rel="noopener noreferrer">文叔叔</a>： https://wss1.cn/f/6rxxf87pos0 复制链接到浏览器打开</li>
+<li>天翼云盘链接：https://cloud.189.cn/t/2YriQfmuEzEr (访问码:8taa)</li>
+<li>百度网盘链接：链接：https://pan.baidu.com/s/14IXs2GBgd-dxixS5kf7ZmQ 提取码：6opo</li>
+<li>说明：文叔叔不充VIP链接会过期，天翼云盘需登录账号和客户端才能下载，百度网盘需超级会员下载才快
+安装好后，登录账号，输入你在"Microsoft 365 admin center"管理界面创建的用户登录即可</li>
+</ul>
+]]></content:encoded>
+      <enclosure url="https://img11.360buyimg.com/ddimg/jfs/t1/212318/23/238/186946/6166f92fE57857a1d/d80c1f96d76714b1.png" type="image/png"/>
+    </item>
+    <item>
+      <title>VMWare虚拟机软件教程</title>
+      <link>https://shiori.fun/posts/vmware.html</link>
+      <guid>https://shiori.fun/posts/vmware.html</guid>
+      <source url="https://shiori.fun/rss.xml">VMWare虚拟机软件教程</source>
+      <description>VMWare虚拟机软件是一个“虚拟PC”软件，它使你可以在一台机器上同时运行二个或更多Windows、DOS、LINUX系统。值得一提的是，VMware的母公司是戴尔。 VMWare 安装说明 1、请卸载旧版本的VM，重启系统后再安装新版本的VM。 2、不能把VM安装到含有中文路径的目录下，否则安装过程中或使用中可能会出现问题。 3、Vista/Win...</description>
+      <category>教程</category>
+      <pubDate>Sat, 11 Sep 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>VMWare虚拟机软件是一个“虚拟PC”软件，它使你可以在一台机器上同时运行二个或更多Windows、DOS、LINUX系统。值得一提的是，VMware的母公司是戴尔。</p>
+<!-- more -->
+<h1>VMWare</h1>
+<h1>安装说明</h1>
+<p>1、请卸载旧版本的VM，重启系统后再安装新版本的VM。
+2、不能把VM安装到含有中文路径的目录下，否则安装过程中或使用中可能会出现问题。
+3、Vista/Win7系统中请关闭UAC功能，以管理员权限运行安装程序。
+4、请把安全软件关闭后再进行安装（安全软件会拦截VM的驱动安装）。</p>
+<blockquote>
+<p>摘自<a href="https://baike.baidu.com/item/VMware#3" target="_blank" rel="noopener noreferrer">百度百科</a></p>
+</blockquote>
+<h1>选择</h1>
+<p>根据自己的使用场景选择合适的软件版本
+《Workstation Player》适合个人用户，《Workstation Pro》适合企业用户。</p>
+<h2>Workstation Player 与 Workstation Pro的功能对比</h2>
+<p>https://www.vmware.com/cn/products/workstation-player.html</p>
+<h1>VMWare Workstation 16 Player 的安装</h1>
+<ul>
+<li><a href="https://www.vmware.com/products/workstation-player.html" target="_blank" rel="noopener noreferrer">官方下载地址</a><br>
+浏览器进入下载网址，点击“download for free”，开始下载<br>
+打开下载好的程序<br>
+安装流程很简单，点击下一步<img src="https://img10.360buyimg.com/ddimg/jfs/t1/202356/18/6188/76151/613c7a6aEc5cad3f9/6f49eda121c6c038.png" alt="vm16player1.png" loading="lazy">
+勾选“增强型键盘驱动程序”，自由选择安装目录（不推荐放c盘）<br>
+用户体验设置，全部取消勾选，下一步<br>
+<img src="https://img12.360buyimg.com/ddimg/jfs/t1/76819/10/16265/17605/613c7a8fEb5c296c3/91cd3add1d2e4443.png" alt="vm16player3.png" loading="lazy">点击继续<br>
+安装完成，稍后重启电脑</li>
+</ul>
+<h1>使用 VMWare Workstation 16 Player 安装centos系统（centos7）</h1>
+<ol>
+<li>
+<p>打开软件后是这个界面<img src="https://img12.360buyimg.com/ddimg/jfs/t1/198091/24/8122/52999/613c7ac3Eb7afef4f/bdb10fbb49a0f6c2.png" alt="vm16player4.png" loading="lazy"></p>
+</li>
+<li>
+<p>选择创建新的虚拟机</p>
+</li>
+<li>
+<p>新建虚拟机向导界面，点击浏览选择“安装程序光盘映像文件”，选择“稍后安装操作系统”可能会出现这个问题<img src="https://img10.360buyimg.com/ddimg/jfs/t1/68150/20/17247/31373/613c6eb0E46c9d656/049e83190a965867.png" alt="error.png" loading="lazy"><br>
+解决方法是：回到主界面<img src="https://img11.360buyimg.com/ddimg/jfs/t1/198962/2/8104/75661/613c6f54Eb2dd4707/0ff44862ad8760a5.png" alt="Snipaste_2021-09-11_16-19-47" loading="lazy">然后<img src="https://img10.360buyimg.com/ddimg/jfs/t1/197666/35/8117/37980/613c6f8aE0c57db64/2f9f770939504145.png" alt="Snipaste_2021-09-11_16-20-04.png" loading="lazy">
+<img src="https://img12.360buyimg.com/ddimg/jfs/t1/71504/8/16593/30658/613c7051Edb9dfbb6/4c3237a5efe0710d.png" alt="Snipaste_2021-09-11_16-20-40.png" loading="lazy">
+选择你的映像文件<img src="https://img10.360buyimg.com/ddimg/jfs/t1/77347/40/16811/31894/613c70a7Eb6b432a8/d7c8b82802386210.png" alt="Snipaste_2021-09-11_16-23-20.png" loading="lazy"></p>
+</li>
+<li>
+<p>选择操作系统，以centos为例<img src="https://img12.360buyimg.com/ddimg/jfs/t1/171552/23/23557/15399/613c7229Ecd20d4de/e62cce40ced08743.png" alt="Snipaste_2021-09-11_16-13-32.png" loading="lazy"></p>
+</li>
+<li>
+<p>虚拟机命名，修改虚拟机文件目录<img src="https://img14.360buyimg.com/ddimg/jfs/t1/207920/11/185/13210/613c72e8E4b2b20b6/f6e16f56e85c5aba.png" alt="Snipaste_2021-09-11_16-15-36.png" loading="lazy">下一步</p>
+</li>
+<li>
+<p>指定磁盘容量<img src="https://img12.360buyimg.com/ddimg/jfs/t1/46365/40/16747/20240/613c7326E017bcbb8/4cb23522169ce679.png" alt="Snipaste_2021-09-11_16-16-05.png" loading="lazy"></p>
+</li>
+<li>
+<p>自定义硬件<img src="https://img12.360buyimg.com/ddimg/jfs/t1/60143/28/17242/19828/613c7369E74d60c19/c67b5f66cf147088.png" alt="Snipaste_2021-09-11_16-16-23.png" loading="lazy"><img src="https://img12.360buyimg.com/ddimg/jfs/t1/76134/20/17240/35138/613c738eE1f53509f/5cd9c35b2e775aa7.png" alt="Snipaste_2021-09-11_16-17-55.png" loading="lazy">修改好后点击完成<img src="https://img10.360buyimg.com/ddimg/jfs/t1/76761/33/16099/20269/613c73b3Ed3a6da08/a84490dfd0462eb2.png" alt="Snipaste_2021-09-11_16-18-06.png" loading="lazy"></p>
+</li>
+<li>
+<p>启动虚拟机<img src="https://img10.360buyimg.com/ddimg/jfs/t1/205743/39/6253/75653/613c73e8Ec019ba81/6bc1a0bb6bf2e7aa.png" alt="Snipaste_2021-09-11_16-18-28.png" loading="lazy"></p>
+</li>
+<li>
+<p>选择“install centos7”敲击enter<img src="https://img12.360buyimg.com/ddimg/jfs/t1/210497/14/165/18513/613c7419Ea2f68ae8/4779f27cb6e8cdb2.png" alt="Snipaste_2021-09-11_16-23-42.png" loading="lazy"></p>
+</li>
+<li>
+<p>请耐心等待</p>
+</li>
+</ol>
+<h2>Welcome to centos</h2>
+<figure><img src="https://img14.360buyimg.com/ddimg/jfs/t1/62357/34/17050/144151/613c74cbE70647e86/44ee12f74160f03c.png" alt="Snipaste_2021-09-11_16-24-48.png" tabindex="0" loading="lazy"><figcaption>Snipaste_2021-09-11_16-24-48.png</figcaption></figure>
+<ol>
+<li>选择系统语言<img src="https://img10.360buyimg.com/ddimg/jfs/t1/121509/5/18199/118420/613c74e0Eb42ee4b3/8ed96a7b7a9835f3.png" alt="Snipaste_2021-09-11_16-25-17.png" loading="lazy"></li>
+<li>本地化配置不管它默认即可，如图<img src="https://img11.360buyimg.com/ddimg/jfs/t1/198342/13/8105/143904/613c74f3Eeef6f686/e6577629e3962974.png" alt="Snipaste_2021-09-11_16-25-55.png" loading="lazy"></li>
+<li>软件选择<img src="https://img12.360buyimg.com/ddimg/jfs/t1/207440/38/251/136434/613c7546Eceb61b7a/b6664787b56f7679.png" alt="Snipaste_2021-09-11_16-26-18.png" loading="lazy">如图：<img src="https://img14.360buyimg.com/ddimg/jfs/t1/210926/17/160/203508/613c7566E32b710e4/66e2e7ea1487216c.png" alt="Snipaste_2021-09-11_16-27-41.png" loading="lazy"></li>
+<li>配置好后，等待加载<img src="https://img13.360buyimg.com/ddimg/jfs/t1/208772/21/185/136314/613c757bE79a516c6/0753d41c061c8c89.png" alt="Snipaste_2021-09-11_16-27-51.png" loading="lazy"></li>
+<li>开启网络<img src="https://img14.360buyimg.com/ddimg/jfs/t1/72191/28/16373/142339/613c76eeE3d3f8782/d6bc1f5a97c01e83.png" alt="Snipaste_2021-09-11_16-33-01.png" loading="lazy"><img src="https://img13.360buyimg.com/ddimg/jfs/t1/81588/20/17231/93736/613c76feE63f8bc67/322c75d45ccacb50.png" alt="Snipaste_2021-09-11_16-32-25.png" loading="lazy"></li>
+<li>所有项配置好后，开始安装</li>
+<li>设置root超级管理员的密码，再设置一个初始用户<img src="https://img10.360buyimg.com/ddimg/jfs/t1/78959/12/16952/169392/613c7756E399b6433/a5b44d43b2420391.png" alt="Snipaste_2021-09-11_16-33-42.png" loading="lazy"></li>
+<li>耐心等待<img src="https://img12.360buyimg.com/ddimg/jfs/t1/63401/13/16873/153920/613c778eE39c0d650/a965ba300ff24be7.png" alt="Snipaste_2021-09-11_16-34-36.png" loading="lazy"></li>
+<li>安装完毕，重启<img src="https://img13.360buyimg.com/ddimg/jfs/t1/206464/5/354/95940/613c77c1Edf051111/9318dfa4ad631982.png" alt="Snipaste_2021-09-11_16-41-13.png" loading="lazy"></li>
+<li>进入系统<img src="https://img12.360buyimg.com/ddimg/jfs/t1/62986/23/16805/5696/613c77f2E9bf87992/feca7cbf2222e957.png" alt="Snipaste_2021-09-11_16-41-33.png" loading="lazy"></li>
+<li>选择许可证<img src="https://img12.360buyimg.com/ddimg/jfs/t1/206890/17/256/111765/613c77f2E8613e42b/4839caacb6a364b0.png" alt="Snipaste_2021-09-11_16-42-36.png" loading="lazy"><img src="https://img12.360buyimg.com/ddimg/jfs/t1/203233/24/6283/53531/613c77f2Ecf7c50db/c2becc35c7091f02.png" alt="Snipaste_2021-09-11_16-42-47.png" loading="lazy"></li>
+<li>完成设置<img src="https://img11.360buyimg.com/ddimg/jfs/t1/171844/3/23485/111724/613c7831Ec015cf77/7a776f62bf5a827d.png" alt="Snipaste_2021-09-11_16-42-57.png" loading="lazy"></li>
+<li>登录账号<img src="https://img14.360buyimg.com/ddimg/jfs/t1/211657/13/186/278759/613c786eE7ae8fee0/4383bc22303e949c.png" alt="Snipaste_2021-09-11_16-43-13.png" loading="lazy"></li>
+<li>选择语言<img src="https://img13.360buyimg.com/ddimg/jfs/t1/76011/25/17327/35904/613c786eE1b503a8c/3b6cd15e2970b46f.png" alt="Snipaste_2021-09-11_16-44-05.png" loading="lazy"></li>
+<li>输入<img src="https://img13.360buyimg.com/ddimg/jfs/t1/206917/35/213/26062/613c786eE87dd66ea/c95b442ea3b7d92a.png" alt="Snipaste_2021-09-11_16-44-41.png" loading="lazy"></li>
+<li>隐私，我选择关闭位置服务<img src="https://img10.360buyimg.com/ddimg/jfs/t1/146769/40/23804/27746/613c786eE049622e9/593772343d81ab98.png" alt="Snipaste_2021-09-11_16-44-53.png" loading="lazy"></li>
+<li>可跳过<img src="https://img13.360buyimg.com/ddimg/jfs/t1/66783/27/16935/35008/613c786eEe036cc74/20f8fc5854a1dabd.png" alt="Snipaste_2021-09-11_16-45-19.png" loading="lazy"></li>
+<li>Get Centos！<img src="https://img14.360buyimg.com/ddimg/jfs/t1/64627/24/17174/60250/613c786dE84cd1723/80c35441cb4e3776.png" alt="Snipaste_2021-09-11_16-45-35.png" loading="lazy"></li>
+</ol>
+<h2>可选：</h2>
+<p>kdump 生产环境下开启，学习环境下可关闭
+<img src="https://img12.360buyimg.com/ddimg/jfs/t1/204987/23/6190/76369/613c7640Eb91ee7bb/00479bfeced4bf14.png" alt="Snipaste_2021-09-11_16-29-35.png" loading="lazy"><br>
+security policy安全策略 生产环境下开启，学习环境下可关闭
+<img src="https://img11.360buyimg.com/ddimg/jfs/t1/205516/36/6273/140519/613c76a8Eef69f34c/3be0f729032cd793.png" alt="Snipaste_2021-09-11_16-30-14.png" loading="lazy"></p>
+<h1>VMWare Workstation 16 Pro 的安装</h1>
+<p><a href="https://www.vmware.com/cn/products/workstation-pro.html" target="_blank" rel="noopener noreferrer">官方下载地址</a><br>
+浏览器进入下载网址，下拉找到“试用 Workstation 16 Pro”，点击下载
+待写...</p>
+]]></content:encoded>
+      <enclosure url="https://img10.360buyimg.com/ddimg/jfs/t1/202356/18/6188/76151/613c7a6aEc5cad3f9/6f49eda121c6c038.png" type="image/png"/>
+    </item>
+    <item>
+      <title>vuepress自定义容器</title>
+      <link>https://shiori.fun/posts/vuepress%E5%AE%B9%E5%99%A8.html</link>
+      <guid>https://shiori.fun/posts/vuepress%E5%AE%B9%E5%99%A8.html</guid>
+      <source url="https://shiori.fun/rss.xml">vuepress自定义容器</source>
+      <description>自定义容器 提示 原文：https://vuepress.github.io/zh/reference/default-theme/markdown.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%B9%E5%99%A8 输入 输出 提示 这是一个提示 </description>
+      <category>vuepress</category>
+      <pubDate>Wed, 08 Mar 2023 18:32:22 GMT</pubDate>
+      <content:encoded><![CDATA[
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>原文：<a href="https://vuepress.github.io/zh/reference/default-theme/markdown.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%B9%E5%99%A8" target="_blank" rel="noopener noreferrer">https://vuepress.github.io/zh/reference/default-theme/markdown.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%B9%E5%99%A8</a></p>
+</div>
+<h2>输入</h2>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>::: tip
+这是一个提示
+:::
+</code></pre></div><h2>输出</h2>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>这是一个提示</p>
+</div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>vuepress组件</title>
+      <link>https://shiori.fun/posts/vuepress%E7%BB%84%E4%BB%B6.html</link>
+      <guid>https://shiori.fun/posts/vuepress%E7%BB%84%E4%BB%B6.html</guid>
+      <source url="https://shiori.fun/rss.xml">vuepress组件</source>
+      <description>全局组件 注册全局组件，当你的VuePress每个页面都需要自定义容器时使用，它会像footer header那样全局布局。 提示 原文 引入插件 配置config 在.vuepress中创建components目录结构如下： 随后可以直接在 markdown 文件中使用 更多实例 如果你想了解更多关于vuepress框架的注册组件运用，那么请看。 源...</description>
+      <category>vuepress</category>
+      <pubDate>Wed, 08 Mar 2023 18:32:22 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>注册全局组件，当你的VuePress每个页面都需要自定义容器时使用，它会像<code>footer</code> <code>header</code>那样全局布局。</p>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p><a href="https://www.vuepress.cn/plugin/official/plugin-register-components.html#vuepress-plugin-register-components" target="_blank" rel="noopener noreferrer">原文</a></p>
+</div>
+<p>引入插件</p>
+<div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span> @vuepress/plugin-register-components
+</code></pre></div><p>配置config</p>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">// .vuepress/config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// ....</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">'@vuepress/register-components'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">componentsDir</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token string">'DemoLayout'</span><span class="token punctuation">,</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在<code>.vuepress</code>中创建<code>components</code>目录结构如下：</p>
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>.
+└─ .vuepress
+   └─ components
+      ├─ DemoLayout.vue
+      ├─ BoxLayout.vue
+      ├─ OtherComponent.vue
+      └─ demo-2.vue
+         └─ demo-2-1.vue
+</code></pre></div><p>随后可以直接在 markdown 文件中使用</p>
+<div class="language-markdown" data-ext="md" data-title="md"><pre class="language-markdown"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DemoLayout</span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>BoxLayout</span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>OtherComponent</span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>demo-2</span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>demo-2-1</span><span class="token punctuation">/&gt;</span></span>
+</code></pre></div><h2>更多实例</h2>
+<p>如果你想了解更多关于vuepress框架的注册组件运用，那么请看。</p>
+<h3><a href="/remember/" target="_blank">实例1：相册页</a></h3>
+<p><a href="">源码</a></p>
+<!-- <RecoDemo :collapse="true">
+  <template slot="code-template">
+    <<< @/.vuepress/components/BoxLayout.vue?template
+  </template>
+  <template slot="code-script">
+    <<< @/.vuepress/components/BoxLayout.vue?script
+  </template>
+  <template slot="code-style">
+    <<< @/.vuepress/components/BoxLayout.vue?style
+  </template>
+</RecoDemo> -->
+<h1>自定义页面</h1>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p><a href="https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html#%E7%89%B9%E5%AE%9A%E9%A1%B5%E9%9D%A2%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B8%83%E5%B1%80" target="_blank" rel="noopener noreferrer">原文</a></p>
+</div>
+<h2>自定义md页面</h2>
+<p>如果你想要使用一个完全自定义的组件来代替当前的页面（而只保留导航栏），你可以再次使用 <code>YAML front matter</code> 来指定这个组件。</p>
+<div class="language-yaml" data-ext="yml" data-title="yml"><pre class="language-yaml"><code></code></pre></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>小爱同学-语音智能助手</title>
+      <link>https://shiori.fun/posts/xiaoai-student.html</link>
+      <guid>https://shiori.fun/posts/xiaoai-student.html</guid>
+      <source url="https://shiori.fun/rss.xml">小爱同学-语音智能助手</source>
+      <description>小爱同学出PC端啦！相信在不久的将来，小爱同学将会支持多个跨平台使用，做为一名米粉怎么能错过这么好玩的东西呢，下面附上下载地址。 链接 小爱同学不仅是一位语音助手， 她还搭载在系统应用的各个入口， 帮你用语音替代复杂手动操作。 正如小爱同学官方所说，语音智能助手正在不断进步，如今人工智能技术发展飞速，我不难想象，在以后，小爱同学或许真的能达到像贾维斯那...</description>
+      <category>有趣的</category>
+      <pubDate>Tue, 23 Mar 2021 18:34:53 GMT</pubDate>
+      <content:encoded><![CDATA[<p>小爱同学出PC端啦！相信在不久的将来，小爱同学将会支持多个跨平台使用，做为一名米粉怎么能错过这么好玩的东西呢，下面附上下载地址。</p>
+<!-- more -->
+<p><a href="https://www.microsoft.com/zh-cn/p/%E5%B0%8F%E7%88%B1%E5%90%8C%E5%AD%A6/9mw76kfhnz0c?activetab=pivot%3Aregionofsystemrequirementstab" target="_blank" rel="noopener noreferrer">链接</a></p>
+<blockquote>
+<p>小爱同学不仅是一位语音助手，
+她还搭载在系统应用的各个入口，
+帮你用语音替代复杂手动操作。</p>
+</blockquote>
+<p>正如小爱同学官方所说，语音智能助手正在不断进步，如今人工智能技术发展飞速，我不难想象，在以后，小爱同学或许真的能达到像贾维斯那样的程度。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>xshell</title>
+      <link>https://shiori.fun/posts/xshell.html</link>
+      <guid>https://shiori.fun/posts/xshell.html</guid>
+      <source url="https://shiori.fun/rss.xml">xshell</source>
+      <description>xshell安装及使用 Xshell的安装 Xshell官方网址：https://www.netsarang.com/en/xshell/ 进入首页，下滑至底部，找到“free for home/school” 1.png 来到 https://www.netsarang.com/en/free-for-home-school/ 这个网址，如上图。 填...</description>
+      <category>教程</category>
+      <pubDate>Tue, 12 Oct 2021 22:58:42 GMT</pubDate>
+      <content:encoded><![CDATA[<p>xshell安装及使用</p>
+<!-- more -->
+<h1>Xshell的安装</h1>
+<p>Xshell官方网址：https://www.netsarang.com/en/xshell/<br>
+进入首页，下滑至底部，找到“free for home/school”
+<img src="https://img14.360buyimg.com/ddimg/jfs/t1/137694/6/27706/109536/6165a399E93701ac9/9ffa4a0b3ddfc13f.png" alt="1.png" loading="lazy"></p>
+<p>来到
+https://www.netsarang.com/en/free-for-home-school/ 这个网址，如上图。
+填入信息，点击“download”，即可在邮箱收到下载链接邮件<br>
+<img src="https://img12.360buyimg.com/ddimg/jfs/t1/164621/25/22373/143197/6165a39aEbaa7a19a/666f4a18177774a6.png" alt="2.png" loading="lazy">
+打开下载好的“Xshell.exe”安装程序<br>
+<img src="https://img11.360buyimg.com/ddimg/jfs/t1/160299/24/23537/3882/6165a399Eb4a8d24f/842ba527f0b0366d.png" alt="3.png" loading="lazy">
+<img src="https://img12.360buyimg.com/ddimg/jfs/t1/199964/40/12743/59075/6165a411E91a1cdd1/4386a1c422035cfe.png" alt="4.png" loading="lazy">
+<img src="https://img10.360buyimg.com/ddimg/jfs/t1/142704/32/25491/46587/6165a411E85ab6592/7eca043cb5d727b6.png" alt="5.png" loading="lazy">
+下一步,<br>
+<img src="https://img11.360buyimg.com/ddimg/jfs/t1/171301/18/24347/89795/6165a401Ea9721f10/0f922ebbf58ccabc.png" alt="6.png" loading="lazy">
+勾选接受许可证条款，点击下一步，<br>
+<img src="https://img10.360buyimg.com/ddimg/jfs/t1/206628/34/5040/45966/6165a4aaE3072ab64/50075838813ba8f3.png" alt="7.png" loading="lazy">
+默认安装路径是C盘，推荐更改安装路径，点击浏览选择你想安装的位置，点击下一步，
+<img src="https://img10.360buyimg.com/ddimg/jfs/t1/211419/13/4941/54227/6165a4aaE2e02f95c/edb27a3253711c7f.png" alt="8.png" loading="lazy">
+点击安装，
+<img src="https://img10.360buyimg.com/ddimg/jfs/t1/214234/18/88/22176/6165a4aaEb4184094/2edba6018ce53935.png" alt="9.png" loading="lazy">
+稍等片刻，
+<img src="https://img11.360buyimg.com/ddimg/jfs/t1/200009/14/12690/44167/6165a4aaEf0ef6c8b/e644bf37fd168b60.png" alt="10.png" loading="lazy">
+安装完成。
+注：每个Xshell版本略有不同，但都差异不大。</p>
+<h1>Xshell的使用</h1>
+<p>略...</p>
+]]></content:encoded>
+      <enclosure url="https://img14.360buyimg.com/ddimg/jfs/t1/137694/6/27706/109536/6165a399E93701ac9/9ffa4a0b3ddfc13f.png" type="image/png"/>
+    </item>
+    <item>
+      <title>介绍页</title>
+      <link>https://shiori.fun/intro.html</link>
+      <guid>https://shiori.fun/intro.html</guid>
+      <source url="https://shiori.fun/rss.xml">介绍页</source>
+      <description>介绍页 Hi guys! 👋 Hi, I’m @shiori2024 👀 I’m interested in computer hardware... ✍️ Blog ⚡ JavaScript 🌱 I’m currently learning Vue.js 📫 How to reach me shiori2024@163.com </description>
+      <pubDate>Sun, 18 Feb 2024 13:26:05 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>Hi guys!</h2>
+<ul>
+<li>👋 Hi, I’m @shiori2024</li>
+<li>👀 I’m interested in <code>computer hardware</code>...</li>
+<li>✍️ <a href="https://shiori.fun" target="_blank" rel="noopener noreferrer">Blog</a></li>
+<li>⚡ JavaScript</li>
+<li>🌱 I’m currently learning <code>Vue.js</code></li>
+<li>📫 How to reach me <a href="mailto:shiori2024@163.com">shiori2024@163.com</a></li>
+</ul>
+<p>&lt;!</p>
+]]></content:encoded>
+      <enclosure url="https://shiori.fun/assets/images/cover4.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>主要功能与配置演示</title>
+      <link>https://shiori.fun/demo/</link>
+      <guid>https://shiori.fun/demo/</guid>
+      <source url="https://shiori.fun/rss.xml">主要功能与配置演示</source>
+      <category>使用指南</category>
+      <pubDate>Sun, 18 Feb 2024 13:26:05 GMT</pubDate>
+    </item>
+    <item>
+      <title>布局与功能禁用</title>
+      <link>https://shiori.fun/demo/disable.html</link>
+      <guid>https://shiori.fun/demo/disable.html</guid>
+      <source url="https://shiori.fun/rss.xml">布局与功能禁用</source>
+      <description>你可以通过设置页面的 Frontmatter，在页面禁用功能与布局。 本页面就是一个示例，禁用了如下功能: 导航栏 侧边栏 路径导航 页面信息 贡献者 编辑此页链接 更新时间 上一篇/下一篇 链接 评论 页脚 返回顶部按钮 </description>
+      <category>使用指南</category>
+      <pubDate>Sun, 18 Feb 2024 13:26:05 GMT</pubDate>
+      <content:encoded><![CDATA[<p>你可以通过设置页面的 Frontmatter，在页面禁用功能与布局。</p>
+<!-- more -->
+<p>本页面就是一个示例，禁用了如下功能:</p>
+<ul>
+<li>导航栏</li>
+<li>侧边栏</li>
+<li>路径导航</li>
+<li>页面信息</li>
+<li>贡献者</li>
+<li>编辑此页链接</li>
+<li>更新时间</li>
+<li>上一篇/下一篇 链接</li>
+<li>评论</li>
+<li>页脚</li>
+<li>返回顶部按钮</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>布局</title>
+      <link>https://shiori.fun/demo/layout.html</link>
+      <guid>https://shiori.fun/demo/layout.html</guid>
+      <source url="https://shiori.fun/rss.xml">布局</source>
+      <description>布局包括: 导航栏 侧边栏 页脚 同时每个页面包含: 路径导航 标题和页面信息 TOC (文章标题列表) 贡献者、更新时间等页面元信息 评论 主题也带有以下元素: 夜间模式按钮 返回顶部按钮 打印按钮 你可以在主题选项和页面的 frontmatter 中自定义它们。 </description>
+      <category>指南</category>
+      <pubDate>Sun, 18 Feb 2024 13:26:05 GMT</pubDate>
+      <content:encoded><![CDATA[<p>布局包括:</p>
+<ul>
+<li><a href="https://theme-hope.vuejs.press/zh/guide/layout/navbar.html" target="_blank" rel="noopener noreferrer">导航栏</a></li>
+<li><a href="https://theme-hope.vuejs.press/zh/guide/layout/sidebar.html" target="_blank" rel="noopener noreferrer">侧边栏</a></li>
+<li><a href="https://theme-hope.vuejs.press/zh/guide/layout/footer.html" target="_blank" rel="noopener noreferrer">页脚</a></li>
+</ul>
+<p>同时每个页面包含:</p>
+<ul>
+<li><a href="https://theme-hope.vuejs.press/zh/guide/layout/breadcrumb.html" target="_blank" rel="noopener noreferrer">路径导航</a></li>
+<li><a href="https://theme-hope.vuejs.press/zh/guide/feature/page-info.html" target="_blank" rel="noopener noreferrer">标题和页面信息</a></li>
+<li><a href="https://theme-hope.vuejs.press/zh/guide/layout/page.html#%E6%A0%87%E9%A2%98%E5%88%97%E8%A1%A8" target="_blank" rel="noopener noreferrer">TOC (文章标题列表)</a></li>
+<li><a href="https://theme-hope.vuejs.press/guide/feature/meta.html" target="_blank" rel="noopener noreferrer">贡献者、更新时间等页面元信息</a></li>
+<li><a href="https://theme-hope.vuejs.press/zh/guide/feature/comment.html" target="_blank" rel="noopener noreferrer">评论</a></li>
+</ul>
+<p>主题也带有以下元素:</p>
+<ul>
+<li><a href="https://theme-hope.vuejs.press/zh/guide/interface/darkmode.html" target="_blank" rel="noopener noreferrer">夜间模式按钮</a></li>
+<li><a href="https://theme-hope.vuejs.press/guide/interface/others.html#%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8%E6%8C%89%E9%92%AE" target="_blank" rel="noopener noreferrer">返回顶部按钮</a></li>
+<li><a href="https://theme-hope.vuejs.press/guide/interface/others.html#%E6%89%93%E5%8D%B0%E6%8C%89%E9%92%AE" target="_blank" rel="noopener noreferrer">打印按钮</a></li>
+</ul>
+<p>你可以在主题选项和页面的 frontmatter 中自定义它们。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Markdown 展示</title>
+      <link>https://shiori.fun/demo/markdown.html</link>
+      <guid>https://shiori.fun/demo/markdown.html</guid>
+      <source url="https://shiori.fun/rss.xml">Markdown 展示</source>
+      <description>VuePress 主要从 Markdown 文件生成页面。因此，你可以使用它轻松生成文档或博客站点。 你应该创建和编写 Markdown 文件，以便 VuePress 可以根据文件结构将它们转换为不同的页面。 Markdown 介绍 如果你是一个新手，还不会编写 Markdown，请先阅读 Markdown 介绍 和 Markdown 演示。 Mark...</description>
+      <category>使用指南</category>
+      <pubDate>Sun, 18 Feb 2024 13:26:05 GMT</pubDate>
+      <content:encoded><![CDATA[<p>VuePress 主要从 Markdown 文件生成页面。因此，你可以使用它轻松生成文档或博客站点。</p>
+<p>你应该创建和编写 Markdown 文件，以便 VuePress 可以根据文件结构将它们转换为不同的页面。</p>
+<!-- more -->
+<h2>Markdown 介绍</h2>
+<p>如果你是一个新手，还不会编写 Markdown，请先阅读 <a href="https://theme-hope.vuejs.press/zh/cookbook/markdown/" target="_blank" rel="noopener noreferrer">Markdown 介绍</a> 和 <a href="https://theme-hope.vuejs.press/zh/cookbook/markdown/demo.html" target="_blank" rel="noopener noreferrer">Markdown 演示</a>。</p>
+<h2>Markdown 配置</h2>
+<p>VuePress 通过 Frontmatter 为每个 Markdown 页面引入配置。</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
+<p>Frontmatter 是 VuePress 中很重要的一个概念，如果你不了解它，你需要阅读 <a href="https://theme-hope.vuejs.press/zh/cookbook/vuepress/page.html#front-matter" target="_blank" rel="noopener noreferrer">Frontmatter 介绍</a>。</p>
+</div>
+<h2>Markdown 扩展</h2>
+<p>VuePress 会使用 <a href="https://github.com/markdown-it/markdown-it" target="_blank" rel="noopener noreferrer">markdown-it</a> 来解析 Markdown 内容，因此可以借助于 markdown-it 插件来实现 <a href="https://github.com/markdown-it/markdown-it#syntax-extensions" target="_blank" rel="noopener noreferrer">语法扩展</a> 。</p>
+<h3>VuePress 扩展</h3>
+<p>为了丰富文档写作，VuePress 对 Markdown 语法进行了扩展。</p>
+<p>关于这些扩展，请阅读 <a href="https://theme-hope.vuejs.press/zh/cookbook/vuepress/markdown.html" target="_blank" rel="noopener noreferrer">VuePress 中的 Markdown 扩展</a>。</p>
+<h3>主题扩展</h3>
+<p>通过 <a href="https://plugin-md-enhance.vuejs.press/zh/" target="_blank" rel="noopener noreferrer"><code>vuepress-plugin-md-enhance</code></a>，主题扩展了更多 Markdown 语法，提供更加丰富的写作功能。</p>
+<h4>提示容器</h4>
+<div v-pre="">
+<p>安全的在 Markdown 中使用 {{ variable }}。</p>
+</div>
+<div class="hint-container info">
+<p class="hint-container-title">自定义标题</p>
+<p>信息容器，包含 <code>代码</code> 与 <a href="#%E6%8F%90%E7%A4%BA%E5%AE%B9%E5%99%A8">链接</a>。</p>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+</code></pre></div></div>
+<div class="hint-container tip">
+<p class="hint-container-title">自定义标题</p>
+<p>提示容器</p>
+</div>
+<div class="hint-container warning">
+<p class="hint-container-title">自定义标题</p>
+<p>警告容器</p>
+</div>
+<div class="hint-container caution">
+<p class="hint-container-title">自定义标题</p>
+<p>危险容器</p>
+</div>
+<details class="hint-container details"><summary>自定义标题</summary>
+<p>详情容器</p>
+</details>
+<ul>
+<li><a href="https://theme-hope.vuejs.press/zh/guide/markdown/hint.html" target="_blank" rel="noopener noreferrer">查看详情</a></li>
+</ul>
+<h4>代码块</h4>
+
+<ul>
+<li><a href="https://theme-hope.vuejs.press/zh/guide/markdown/code-tabs.html" target="_blank" rel="noopener noreferrer">查看详情</a></li>
+</ul>
+<h4>上下角标</h4>
+<p>19<sup>th</sup> H<sub>2</sub>O</p>
+<ul>
+<li><a href="https://theme-hope.vuejs.press/zh/guide/markdown/sup-sub.html" target="_blank" rel="noopener noreferrer">查看详情</a></li>
+</ul>
+<h4>自定义对齐</h4>
+<div style="text-align:center">
+<p>我是居中的</p>
+</div>
+<div style="text-align:right">
+<p>我在右对齐</p>
+</div>
+<ul>
+<li><a href="https://theme-hope.vuejs.press/zh/guide/markdown/align.html" target="_blank" rel="noopener noreferrer">查看详情</a></li>
+</ul>
+<h4>Attrs</h4>
+<p>一个拥有 ID 的 <strong id="word">单词</strong>。</p>
+<ul>
+<li><a href="https://theme-hope.vuejs.press/zh/guide/markdown/attrs.html" target="_blank" rel="noopener noreferrer">查看详情</a></li>
+</ul>
+<h4>脚注</h4>
+<p>此文字有脚注<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">.</a></p><a class="footnote-anchor" id="footnote-ref1">
+</a><ul><a class="footnote-anchor" id="footnote-ref1">
+</a><li><a class="footnote-anchor" id="footnote-ref1"></a><a href="https://theme-hope.vuejs.press/zh/guide/markdown/footnote.html" target="_blank" rel="noopener noreferrer">查看详情</a></li>
+</ul>
+<h4>标记</h4>
+<p>你可以标记 <mark>重要的内容</mark> 。</p>
+<ul>
+<li><a href="https://theme-hope.vuejs.press/zh/guide/markdown/mark.html" target="_blank" rel="noopener noreferrer">查看详情</a></li>
+</ul>
+<h4>任务列表</h4>
+<ul class="task-list-container">
+<li class="task-list-item">
+<p><input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-0"> 计划 1</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" class="task-list-item-checkbox" id="task-item-1" disabled="disabled"><label class="task-list-item-label" for="task-item-1"> 计划 2</label></p>
+</li>
+<li>
+<p><a href="https://theme-hope.vuejs.press/zh/guide/markdown/tasklist.html" target="_blank" rel="noopener noreferrer">查看详情</a></p>
+</li>
+</ul>
+<h3>图片增强</h3>
+<p>支持为图片设置颜色模式和大小</p>
+<ul>
+<li><a href="https://theme-hope.vuejs.press/zh/guide/markdown/image.html" target="_blank" rel="noopener noreferrer">查看详情</a></li>
+</ul>
+<h4>组件</h4>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>页面配置</title>
+      <link>https://shiori.fun/demo/page.html</link>
+      <guid>https://shiori.fun/demo/page.html</guid>
+      <source url="https://shiori.fun/rss.xml">页面配置</source>
+      <description>more 注释之前的内容被视为文章摘要。 页面标题 The first H1 title in Markdown will be regarded as page title. Markdown 中的第一个 H1 标题会被视为页面标题。 你可以在 Markdown 的 Frontmatter 中设置页面标题。 页面信息 你可以在 Markdown 的 ...</description>
+      <category>使用指南</category>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
+<!-- more -->
+<h2>页面标题</h2>
+<p>The first H1 title in Markdown will be regarded as page title.</p>
+<p>Markdown 中的第一个 H1 标题会被视为页面标题。</p>
+<p>你可以在 Markdown 的 Frontmatter 中设置页面标题。</p>
+<div class="language-markdown" data-ext="md" data-title="md"><pre class="language-markdown"><code></code></pre></div>]]></content:encoded>
+      <enclosure url="https://shiori.fun/assets/images/cover1.jpg" type="image/jpeg"/>
+    </item>
+  </channel>
+</rss>
