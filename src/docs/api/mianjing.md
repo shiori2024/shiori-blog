@@ -12,7 +12,7 @@ next: false
 Base URLs:
 
 * <a href="http://localhost:3000">开发环境: http://localhost:3000</a>
-* <a href="https://u.shiori.fun:9669/api/interview">生产环境: https://u.shiori.fun:9669/api/interview</a>
+* <a href="https://u.shiori.fun/api/interview">生产环境: https://u.shiori.fun/api/interview</a>
 
 # Authentication
 
