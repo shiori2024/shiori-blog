@@ -3,6 +3,7 @@ import theme from "./theme.js";
 import { getDirname, path } from "@vuepress/utils";
 const __dirname = getDirname(import.meta.url);
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+import { feedPlugin } from '@vuepress/plugin-feed'
 
 export default defineUserConfig({
   base: "/",
@@ -42,11 +43,14 @@ export default defineUserConfig({
       // componentsDir写法，该文件夹下的组件都会被注册为Vue组件。
       componentsDir: path.resolve(__dirname, './components'),
     }),
-    // searchConsolePlugin({
-    //   // options ...
-    //   baiduId: '',
-    //   toutiaoAutoPushId: ''
-    // })
+    feedPlugin({
+      // 选项
+      hostname: 'https://shiori.fun',
+      json: true,
+      rss: true,
+      jsonOutputFilename: 'feed.json',
+      rssOutputFilename: 'rss.xml'
+    }),
   ],
 
 
