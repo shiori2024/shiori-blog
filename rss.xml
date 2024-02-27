@@ -6,12 +6,12 @@
     <link>https://shiori.fun/</link>
     <description>你知道吗，樱花飘落的速度是秒速五厘米</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 27 Feb 2024 06:31:55 GMT</pubDate>
-    <lastBuildDate>Tue, 27 Feb 2024 06:31:55 GMT</lastBuildDate>
+    <pubDate>Tue, 27 Feb 2024 06:34:05 GMT</pubDate>
+    <lastBuildDate>Tue, 27 Feb 2024 06:34:05 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>birthday</category>
     <category>bot</category>
+    <category>birthday</category>
     <category>DIY</category>
     <category>教程</category>
     <category>React</category>
@@ -30,13 +30,13 @@
       <link>https://shiori.fun/docs/api/mianjing.html</link>
       <guid>https://shiori.fun/docs/api/mianjing.html</guid>
       <source url="https://shiori.fun/rss.xml">面经API</source>
-      <description>API Base URLs: 开发环境: http://localhost:3000 生产环境: https://u.shiori.fun:9669/api/interview Authentication 面经接口 GET 获取所有文章 GET /api/interview 200 Response Responses Responses Data ...</description>
+      <description>API Base URLs: 开发环境: http://localhost:3000 生产环境: https://u.shiori.fun/api/interview Authentication 面经接口 GET 获取所有文章 GET /api/interview 200 Response Responses Responses Data Schem...</description>
       <pubDate>Tue, 27 Feb 2024 06:31:18 GMT</pubDate>
       <content:encoded><![CDATA[
 <p>Base URLs:</p>
 <ul>
 <li><a href="http://localhost:3000">开发环境: http://localhost:3000</a></li>
-<li><a href="https://u.shiori.fun:9669/api/interview">生产环境: https://u.shiori.fun:9669/api/interview</a></li>
+<li><a href="https://u.shiori.fun/api/interview">生产环境: https://u.shiori.fun/api/interview</a></li>
 </ul>
 <h1>Authentication</h1>
 <h1>面经接口</h1>
@@ -169,17 +169,6 @@ img<span class="token punctuation">.</span><span class="token function-variable 
 img<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token constant">ROOT_PATH</span> <span class="token operator">+</span> <span class="token string">'/data-gl/asset/sample.jpg'</span><span class="token punctuation">;</span>
 img<span class="token punctuation">.</span>crossOrigin <span class="token operator">=</span> <span class="token string">'Anonymous'</span><span class="token punctuation">;</span>
 </code></pre></div><p>:::</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Happy Birthday!</title>
-      <link>https://shiori.fun/demo/birthday.html</link>
-      <guid>https://shiori.fun/demo/birthday.html</guid>
-      <source url="https://shiori.fun/rss.xml">Happy Birthday!</source>
-      <description> </description>
-      <category>birthday</category>
-      <pubDate>Sun, 18 Feb 2024 15:02:23 GMT</pubDate>
-      <content:encoded><![CDATA[
 ]]></content:encoded>
     </item>
     <item>
@@ -340,6 +329,17 @@ pip config <span class="token builtin class-name">set</span> global.extra-index-
 </blockquote>
 ]]></content:encoded>
       <enclosure url="https://img13.360buyimg.com/ddimg/jfs/t1/197517/18/3220/95621/61189399Eba01e9ee/8606260b2f11909c.gif" type="image/gif"/>
+    </item>
+    <item>
+      <title>Happy Birthday!</title>
+      <link>https://shiori.fun/demo/birthday.html</link>
+      <guid>https://shiori.fun/demo/birthday.html</guid>
+      <source url="https://shiori.fun/rss.xml">Happy Birthday!</source>
+      <description> </description>
+      <category>birthday</category>
+      <pubDate>Sun, 18 Feb 2024 15:02:23 GMT</pubDate>
+      <content:encoded><![CDATA[
+]]></content:encoded>
     </item>
     <item>
       <title>Awtrix</title>
