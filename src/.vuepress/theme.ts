@@ -21,7 +21,7 @@ export default hopeTheme({
       GitHub: "https://github.com/shiori2024",
       Gitee: "https://gitee.com/shiori2024/",
       Zhihu: "/",
-      Rss: "/"
+      Rss: "/feed.json/"
     }
   },
 
@@ -80,7 +80,7 @@ export default hopeTheme({
     components: {
       components: ["Badge", "VPCard", "SiteInfo", "BiliBili"]
     },
-
+    
     // comment: {
     //   provider: "Giscus",
     //   repo: "shiori2024/shiori-blog",
