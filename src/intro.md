@@ -19,28 +19,9 @@ You can click the Preview link to take a look at your changes.
 --->
 <div style="display:flex">
   <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img height=200 align="center" src="https://github-readme-stats-sigma-liard.vercel.app/api?username=shiori2024&show_icons=true" />
+    <img src="https://github-readme-stats-sigma-liard.vercel.app/api?username=shiori2024&show_icons=true" />
   </a>
   <a href="https://github.com/anuraghazra/convoychat">
-    <img height=200 align="center" src="https://github-readme-stats-sigma-liard.vercel.app/api/top-langs?username=shiori2024&layout=compact&langs_count=8" />
+    <img src="https://github-readme-stats-sigma-liard.vercel.app/api/top-langs?username=shiori2024&layout=compact&langs_count=8" />
   </a>
 </div>
-
-::: vue-demo 可选的标题文字
-
-```vue
-<!-- ↑ 你也可以使用 html -->
-<template>
-  <!-- vue 模板 -->
-</template>
-<script>
-export default {
-  // vue 组件
-};
-</script>
-<style>
-/* css 代码 */
-</style>
-```
-
-:::

@@ -16,5 +16,5 @@ next: false
   url="https://shiori.fun"
   logo="https://shiori.fun/logo.png"
   repo="https://github.com/shiori2024/shiori-blog"
-  preview="https://shiori.fun/assets/image/shiori.png"
+  preview="https://shiori.fun/assets/images/shiori.png"
 />

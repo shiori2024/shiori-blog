@@ -47,7 +47,7 @@ export default hopeTheme({
   sidebar: false,
 
   // 页脚
-  footer: '<a href="https://beian.miit.gov.cn/" target="_blank"><span>蜀ICP备2022016473号-1</span></a><span>&nbsp;&nbsp;&nbsp;</span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51030002000194"><img src="http://api.sakurafeiyu.top/imgs/beian_icon.png"/><span>川公网安备 51030002000194号</span></a>',
+  footer: '<a href="https://beian.miit.gov.cn/" target="_blank"><span>蜀ICP备2024054971号</span></a><span>&nbsp;&nbsp;&nbsp;</span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51030002000194"><img src="http://api.sakurafeiyu.top/imgs/beian_icon.png"/><span>川公网安备 51030002000194号</span></a>',
   displayFooter: true,
 
   // 加密配置
@@ -81,13 +81,13 @@ export default hopeTheme({
       components: ["Badge", "VPCard", "SiteInfo", "BiliBili"]
     },
 
-    comment: {
-      provider: "Giscus",
-      repo: "shiori2024/shiori-blog",
-      repoId: 'R_kgDOLUNp0g',
-      category: 'Announcements',
-      categoryId: 'DIC_kwDOLUNp0s4CdX1D'
-    },
+    // comment: {
+    //   provider: "Giscus",
+    //   repo: "shiori2024/shiori-blog",
+    //   repoId: 'R_kgDOLUNp0g',
+    //   category: 'Announcements',
+    //   categoryId: 'DIC_kwDOLUNp0s4CdX1D'
+    // },
 
     // 此处开启了很多功能用于演示，你应仅保留用到的功能。
     mdEnhance: {
