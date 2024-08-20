@@ -25,3 +25,11 @@ next: false
   repo="https://github.com/shiori2024/shiori-blog"
   preview="https://shiori.fun/assets/images/shiori.png"
 />
+<SiteInfo
+  name="种桃道士"
+  desc="It's Taoist"
+  url="https://www.taoist-o.cn"
+  logo="https://www.taoist-o.cn/upload/Avatar.jpg"
+  repo="https://www.taoist-o.cn"
+  preview=""
+/>
