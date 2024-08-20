@@ -6,8 +6,8 @@
     <link>https://shiori.fun/</link>
     <description>你知道吗，樱花飘落的速度是秒速五厘米</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 27 Feb 2024 06:34:05 GMT</pubDate>
-    <lastBuildDate>Tue, 27 Feb 2024 06:34:05 GMT</lastBuildDate>
+    <pubDate>Tue, 20 Aug 2024 10:57:40 GMT</pubDate>
+    <lastBuildDate>Tue, 20 Aug 2024 10:57:40 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>bot</category>
@@ -176,7 +176,7 @@ img<span class="token punctuation">.</span>crossOrigin <span class="token operat
       <link>https://shiori.fun/bot/</link>
       <guid>https://shiori.fun/bot/</guid>
       <source url="https://shiori.fun/rss.xml">栞栞</source>
-      <description>栞栞，名称源自游戏《公主连结Re:Dive》中的人物角色（公主）栞。一位非常软萌可爱的少女，因为体弱多病的缘故在伊丽莎白牧场养病。 栞栞 当前版本v2.0.1 栞栞的头像 可爱，温柔，傲娇，体弱 相关信息 添加更多性格请提交issues 说明 本机器人是使用NoneBot-v2框架的QQ机器人和yobot公会战辅助机器人，功能使用NoneBot社区商店...</description>
+      <description>栞栞，名称源自游戏《公主连结Re:Dive》中的人物角色（公主）栞。一位非常软萌可爱的少女，因为体弱多病的缘故在伊丽莎白牧场养病。 栞栞 当前版本v2.0.1 栞栞的头像 可爱，温柔，傲娇，体弱 Tip 添加更多性格请提交issues 说明 本机器人是使用NoneBot-v2框架的QQ机器人和yobot公会战辅助机器人，功能使用NoneBot社区商店所...</description>
       <category>bot</category>
       <pubDate>Sun, 18 Feb 2024 15:02:23 GMT</pubDate>
       <content:encoded><![CDATA[<p>栞栞，名称源自游戏《<a href="https://game.bilibili.com/pcr/" target="_blank" rel="noopener noreferrer">公主连结Re:Dive</a>》中的人物角色（公主）<a href="https://wiki.biligame.com/pcr/%E6%A0%9E" target="_blank" rel="noopener noreferrer">栞</a>。一位非常软萌可爱的少女，因为体弱多病的缘故在伊丽莎白牧场养病。</p>
@@ -186,12 +186,16 @@ img<span class="token punctuation">.</span>crossOrigin <span class="token operat
 <img src="https://img12.360buyimg.com/ddimg/jfs/t1/177496/11/19424/7868/61188268E43a55f72/7368e46f20382fe7.jpg" alt="栞栞的头像" loading="lazy"></p>
 <p>可爱，温柔，傲娇，体弱</p>
 <div class="hint-container info">
-<p class="hint-container-title">相关信息</p>
+<p class="hint-container-title">Tip</p>
 <p>添加更多性格请提交<a href="https://github.com/a1046700338/MyPress/issues/new" target="_blank" rel="noopener noreferrer">issues</a></p>
 </div>
 <h2>说明</h2>
 <p>本机器人是使用<code>NoneBot-v2</code>框架的QQ机器人和yobot公会战辅助机器人，功能使用NoneBot社区商店所提供的插件，进行二次修改，因地制宜的，达到公主连结游戏辅助和群聊机器人娱乐使用的效果。<br>
-<a href="http://bot.sakurafeiyu.top:9222" target="_blank" rel="noopener noreferrer">栞栞pcr公会战面板</a></p>
+<s><a href="">栞栞pcr公会战面板</a></s></p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
+<p>请注意，由于<a href="https://github.com/Mrs4s/go-cqhttp/issues/2471" target="_blank" rel="noopener noreferrer">go-cqhttp协议库即将停止维护</a>，故本文章已不再适用！建议使用 <code>Shamrock</code> 或 <code>NTQQ</code> 方案。</p>
+</div>
 <h2>维护者留言</h2>
 <p>我承诺一件事，永不收费，只要群里还在玩着pcr，栞栞会一直运行下去。
 2021/8/2    维护者（栞栞的super admin）：花诽语 | 联系方式：<a href="mailto:1046700338@qq.com">1046700338@qq.com</a></p>
