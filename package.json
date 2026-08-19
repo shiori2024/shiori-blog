@@ -4,6 +4,9 @@
   "description": "A project of vuepress-theme-hope",
   "license": "MIT",
   "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "docs:build": "vuepress-vite build src",
     "docs:clean-dev": "vuepress-vite dev src --clean-cache",
